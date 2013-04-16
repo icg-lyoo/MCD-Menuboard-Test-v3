@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<!-- LY Branch-->
 <html>
 	<head>
 		<title></title>
@@ -99,6 +99,8 @@
                     queryIndex = window.location.href.indexOf('?');
                     if(queryIndex!=-1){
                         url = window.location.href.substring(0, queryIndex);
+                        
+                        //needs to serve the new html content via ajax
                         window.location.href = url + "?daypart=" + 'breakfast';
                     }
                     else {
