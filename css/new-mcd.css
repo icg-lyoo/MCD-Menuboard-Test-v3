@@ -1,7 +1,7 @@
 /* CSS */
 @font-face {
     font-family: 'DINOTC';
-    src: url('../font/DINOT-Cond2.eot');    
+    src: url('../font/DINOT-Cond2.eot');
     src: url('../font/DINOT-Cond2.eot?#iefix') format('embedded-opentype'),
          url('../font/DINOT-Cond2.otf') format('opentype');
     font-weight: normal;
@@ -10,7 +10,7 @@
 
 @font-face {
     font-family: 'DINOTCM';
-    src: url('../font/DINOT-CondMedium.eot');    
+    src: url('../font/DINOT-CondMedium.eot');
     src: url('../font/DINOT-CondMedium.eot?#iefix') format('embedded-opentype'),
          url('../font/DINOT-CondMedium.otf') format('opentype');
     font-weight: normal;
@@ -19,7 +19,7 @@
 
 @font-face {
     font-family: 'DINOTCB';
-    src: url('../font/DINOT-CondBold.eot');    
+    src: url('../font/DINOT-CondBold.eot');
     src: url('../font/DINOT-CondBold.eot?#iefix') format('embedded-opentype'),
         url('../font/DINOT-CondBold2.otf') format('opentype');
     font-weight: normal;
@@ -27,7 +27,7 @@
 }
 
 
-root { 
+root {
 /*    display: block;*/
 }
 
@@ -154,12 +154,15 @@ li {
 .evm-number.chicken {
     background: url("../assets/evm_number_purple.png") no-repeat center center scroll;
 }
+
 .evm-number.burger {
     background: url("../assets/evm_number_red.png") no-repeat center center scroll;
 }
+
 .evm-number.angus {
     background: url("../assets/evm_number_brown.png") no-repeat center center scroll;
 }
+
 .evm-heading {
     z-index:10;
     position:relative;
@@ -177,9 +180,11 @@ li {
 .evm-chicken .evm-heading-span {
     border-color: #752D8F;
 }
+
 .evm-burger .evm-heading-span {
     border-color: #C40516;
 }
+
 .evm-angus .evm-heading-span {
     border-color: #AE4425;
 }
@@ -215,12 +220,15 @@ li {
 .evm-chicken .evm-price-label-container {
     color: #752D8F;
 }
+
 .evm-burger .evm-price-label-container {
     color: #C40516;
 }
+
 .evm-angus .evm-price-label-container {
     color: #AE4425;
 }
+
 .evm-breakfast .evm-price-label-container {
     color: #AE4425;
 }
@@ -237,20 +245,22 @@ li {
     margin-right:4px;
     font-size:35px;
 }
+
 .evm-label-container {
     font-size: 28px;
     padding: 4px 0 0 0;
 }
 
-.calorie-description-container{
+.calorie-description-container {
     float:left;
     font-size:14px;
     padding: 0px 5px 0 0;
 }
 
-.evm-calorie-container .pill{
+.evm-calorie-container .pill {
     border-radius: 20px;
     border: 1px solid;
+    margin-top: 3px;
 }
 
 .calorie-content-container {
@@ -291,10 +301,12 @@ li {
 .menu-heading-category-span {
     border-bottom:4px dotted;
 }
+
 .menu-heading-category-description {
     font-family: "DINOTCM";
     font-size:32px;
 }
+
 .menu-heading-category-description-span {
 }
 
@@ -302,6 +314,7 @@ li {
     font-size: 48px;
     font-family: "DINOTCB";
 }
+
 .menu-category-subheading-description {
     font-size: 28px;
     line-height:60%;
@@ -312,6 +325,7 @@ li {
     font-family: "DINOTCB";
     line-height: 100%;
 }
+
 .menu-item-details{
     font-size:38px;
     line-height: 100%;
@@ -319,25 +333,29 @@ li {
 .menu-item-price {
     font-family: "DINOTCB";
 }
+
 .menu-item-calorie {
     font-family: "DINOTCM";
     color: #656565;
 }
+
 .menu-item-description{
     font-size:28px;
     font-family: "DINOTCB";
 }
+
 .menu-item-subdescription {
     font-size: 20px;
 }
+
 .menu-item-block-text {
     font-size: 30px;
     line-height:100%;
 }
+
 .menu-item-disclaimer {
     font-size: 20px;
 }
-
 
 .menu-content-list.li_cont2 {
     height:auto;
@@ -377,38 +395,39 @@ li {
     border: 1px solid;
     border-radius: 13px;
     float: left;
-    line-height: 100%;
-    margin: 6px 6px 0 0;
-    padding: 0px 4px 2px 6px;
+    margin: 8px 6px 0 0;
     font-size: 24px;
-    text-align: center;
 }
 
 /* NOT NEEDED, nor the spans nested inside the divs .pill-circle */
-/*.pill-circle .pill-circle-span-s {
+.pill-circle .pill-circle-span-s {
     position: relative;
-    top: -11px;
-    left: 8px;
+    top: -10px;
+    left: 9px;
 }
+
 .pill-circle .pill-circle-span-m {
     position: relative;
     top: -9px;
-    left: 5px;
+    left: 6px;
 }
+
 .pill-circle .pill-circle-span-l {
     position: relative;
-    top:-8px;
+    top:-7px;
     left:10px;
-}*/
+}
 
-.pill{
+.pill {
     float: left;
     font-size: 20px;
     border-radius: 12px;
     border: 1px solid;
+    line-height: 100%;
+    margin: 9px 5px 0 0;
+    padding: 0 4px 2px 6px;
     text-align: center;
     width: 50px;
-    margin: 1px 5px 0 0;
 }
 
 .menu-2col {
