@@ -19,6 +19,8 @@ var mcdController = {
 
         daypartController.run();
         mcdController.setupFlashVideo();
+
+        $('.menu-content-list').makeacolumnlists({cols: 2, colWidth: 400, equalHeight: false});
     },
     setupFlashVideo: function() {
         // to play the pfe flash video
