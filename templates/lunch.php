@@ -1670,12 +1670,9 @@
                                     <?php if(!empty($evm['pricelabel']['sandwich']['pill'])): ?>
                                     <div class="evm-calorie-container evm-alternate-sandwich">
                                         
-                                        <?php if(!empty($evm['pricelabel']['sandwich']['pill'])): ?>
                                         <div class="calorie-description-container">
                                             <span class="pill">crispy</span>
                                         </div>
-                                        <?php endif;?>
-                                        
                                         
                                         <div class="calorie-content-container">
                                             <span class="calorie">0000-0000 Cal.</span>
@@ -1696,9 +1693,13 @@
                                         </div>
                                     </div>
                                     <div class="evm-calorie-container">
+
+                                        <?php if(!empty($evm['pricelabel']['sandwich']['pill'])): ?>
                                         <div class="calorie-description-container">
                                             <span class="pill">grilled</span>
                                         </div>
+                                        <?php endif;?>
+
                                         <div class="calorie-content-container">
                                             <span class="calorie">0000-0000 Cal.</span>
                                         </div>
