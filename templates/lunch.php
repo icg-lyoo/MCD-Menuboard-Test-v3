@@ -188,18 +188,13 @@
                                             </ul>
                                         </div>
                                     </li>
-                                    
-                                    
                                 </ul>
                                 
                             </div>
                         </div> <!-- end of menu-conten-container, transition from dollar->kids meal->etc-->
-                        
-                        
-                        
-                        
+
                         <div class="menu-content-container category-happy-meal">
-                            
+
                             <style>
                                 .category-happy-meal .menu-item-price {
                                     color: #D3371E;
@@ -857,10 +852,7 @@
 
 
                     </div>
-                    
-                    
-                    
-                    
+
                     <!-- beverage calorie span needs to be in heading -->
                     <div class="menu-content-container category-beverages">
 
@@ -893,18 +885,14 @@
                                     margin: 0 8px 0 0;
                                 }
 
-
-
-
-
                             </style>
-                        
+
                             <div class="menu-featured-product">
                                 <img src="./media/_0008_beverages_image-19.png"/>
                             </div>
-                            
+
                             <div class="menu-zone-snippet" style="position:absolute; top:28px; left:380px;">
-                                
+
                                 <style>
                                     .menu-beverage-list {
                                         width:250px;
@@ -913,7 +901,7 @@
                                         float:left;
                                     }
                                 </style>
-                                
+
                                 <div class="menu-beverage-list">
                                     <ul>
                                         <li><img src="./assets/bev_icons/coca-cola-icon.png"</li>
@@ -926,7 +914,6 @@
                                         <li><img src="./assets/bev_icons/mellow-yellow-icon.png"</li>
                                         <li><img src="./assets/bev_icons/minute-maid-light-icon.png"</li>
                                         <li><img src="./assets/bev_icons/sprite-icon.png"</li>
-                                        
                                     </ul>
                                 </div>
                             </div>
@@ -944,7 +931,6 @@
                                                 <li>
                                                     <div class="pill-circle"><span class="pill-circle-span-s">s</span></div>
                                                     <span class="menu-item-price">1.99</span>
-                                                    
                                                 </li>
                                                 <li>
                                                     <div class="pill-circle"><span class="pill-circle-span-m">m</span></div>
@@ -966,7 +952,6 @@
                                                 <li>
                                                     <div class="pill-circle"><span class="pill-circle-span-s">s</span></div>
                                                     <span class="menu-item-price">1.99</span>
-                                                    
                                                 </li>
                                                 <li>
                                                     <div class="pill-circle"><span class="pill-circle-span-m">m</span></div>
@@ -1261,7 +1246,6 @@
                                             'calorie'=>'0000-0000 Cal.',
                                             'pill'=>false,
                                        ),
-                                       
                                    ),
                                 ),
                                 array(
@@ -1290,7 +1274,6 @@
                                             'calorie'=>'0000-0000 Cal.',
                                             'pill'=>false,
                                        ),
-                                       
                                    ),
                                 ),
                                 array(
@@ -1319,7 +1302,6 @@
                                             'calorie'=>'0000-0000 Cal.',
                                             'pill'=>false,
                                        ),
-                                       
                                    ),
                                 ),
                                 array(
@@ -1328,8 +1310,8 @@
                                   'color'=>'#752D8F',
                                   'img'=> array(
                                             'sandwich'=>array(
-                                                'crispy'=>'_0006_06_pcc_5p_ld.png',
                                                 'grilled'=>'_0015_06_pcc_grilled_5p_ld.png',
+                                                'crispy'=>'_0006_06_pcc_5p_ld.png',
                                             ),
                                             'meal'=>array(
                                                 'fries.png',
@@ -1352,7 +1334,6 @@
                                             'calorie'=>'0000-0000 Cal.',
                                             'pill'=>false,
                                        ),
-                                       
                                    ),
                                 ),
                                 array(
@@ -1361,8 +1342,8 @@
                                   'color'=>'#752D8F',
                                   'img'=> array(
                                             'sandwich'=>array(
-                                                'crispy'=>'_0007_07-pcc_5p_ld.png',
                                                 'grilled'=>'_0016_07pcc_grilled_5p_ld.png',
+                                                'crispy'=>'_0007_07-pcc_5p_ld.png',
                                             ),
                                             'meal'=>array(
                                                 'fries.png',
@@ -1385,7 +1366,6 @@
                                             'calorie'=>'0000-0000 Cal.',
                                             'pill'=>false,
                                        ),
-                                       
                                    ),
                                 ),
                                 array(
@@ -1394,8 +1374,8 @@
                                   'color'=>'#752D8F',
                                   'img'=> array(
                                             'sandwich'=>array(
-                                                'crispy'=>'_0008_08_pcr_blt_5p_ld.png',
                                                 'grilled'=>'_0017_08_pcr_blt_grilled_5p_ld.png',
+                                                'crispy'=>'_0008_08_pcr_blt_5p_ld.png',
                                             ),
                                             'meal'=>array(
                                                 'fries.png',
@@ -1625,15 +1605,10 @@
                                       'add-dessert_ss_5panel.png',
                                   ),
                                 ),
-                                
-                                
-                                
                             );
-                        
-                        
                         ?>
     
-                        <?php 
+                        <?php
 //                            echo '<pre>';
 //                            print_r($evms);
 //                            echo '</pre>';
@@ -1646,11 +1621,11 @@
                             <div class="evm-number <?php print $evm['category'] ?>"><?php print $key+1 ?></div>
                             <div class="evm-image">
                                 <div class="meal-items-image">
-                                    <img style="left:300px;" src="./media/coke.png"/>
-                                    <img style="left:370px; top:32px;" src="./media/fries.png"/>
+                                    <img style="left: 280px; top: 10px" src="./media/coke.png"/>
+                                    <img style="left: 350px; top: 42px;" src="./media/fries.png"/>
                                 </div>
                                 
-                                <div class="sandwich-item-image">
+                                <div class="sandwich-item-image<?php echo count($evm['img']['sandwich']) > 1 ? ' evm-item-multiple' : ''; ?>">
                                     
                                     <?php 
                                         $count = 1;
@@ -1664,7 +1639,7 @@
                             </div>
                             <div class="evm-heading"><span class="evm-heading-span"><?php print ucwords($evm['title']); ?></span></div>
                             <div class="evm-description">
-                                <div class="evm-description-sandwich">
+                                <div class="evm-description-sandwich<?php echo count($evm['img']['sandwich']) > 1 ? ' evm-item-multiple' : ''; ?>">
                                     <div class="evm-price-label-container">
                                         <div class="evm-price-container">
                                             <span class="price">1.99</span>
@@ -1708,7 +1683,7 @@
                                     
                                 </div>
 
-                                <div class="evm-description-meal">
+                                <div class="evm-description-meal<?php echo count($evm['img']['sandwich']) > 1 ? ' evm-item-multiple' : ''; ?>">
                                     <div class="evm-price-label-container">
                                         <div class="evm-price-container">
                                             <span class="price">2.99</span>

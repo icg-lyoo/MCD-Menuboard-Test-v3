@@ -5,13 +5,13 @@
             $context = this,
             // private vars
             properties = {
-                $elements: null,
-                $container: null,
+                $elements: null, // $object: operation effected dom elements
+                $container: null, // $object: parent container to $elements
                 dataObj: {}
             },
             // timeline animation special properties defaults
             animationSpecials = {
-                ease: Linear.easeNone
+                ease: Quad.easeOut
             },
             // default vars - customizable
             settings = {
@@ -21,13 +21,21 @@
                 // animation properties
                 timelineMaster: new TimelineMax(), // override to use a pre-existing TimelineMax instance instead of a new TimelineMax instance
                 duration: 0.5,
-                setVars: {},
+                stagger: 0,
+                position: "+=0",
+                alignment: "sequence",
+                timelineVars: {
+                    delay: 0,
+                    repeat: 0,
+                    repeatDelay: 0,
+                    yoyo: false,
+                    pause: false,
+                    eventCallback: null // object: define "typeOf": String ("onComplete", "onUpdate", "onStart", "onReverseComplete", "onRepeat"), "callback": Function
+                },
+                setVars: null, // object: define any css values that will take effect on $elements immediately; conveniently set $elements' state in same animation call, or independent of any other animation operations
                 flyInVars: {
                     css: { left: $("body").width() },
                     ease: animationSpecials.ease
-                },
-                fadeStartVars: {
-                    css: { alpha: 0 }
                 },
                 fadeInVars: {
                     css: { alpha: 1 },
@@ -36,89 +44,223 @@
                 fadeOutVars: {
                     css: { alpha: 0 },
                     ease: animationSpecials.ease
+                },
+                scaleVars: {
+                    css: { scale: 0.5 },
+                    ease: animationSpecials.ease
+                },
+                transformVars: {
+                    css: {},
+                    ease: animationSpecials.ease
                 }
-        },
-        methods = {
-            init: function(options) {
+            },
+            methods = {
+                init: function(options) {
 
-                settings = $.extend(true, settings, options);
+                    settings = $.extend(true, settings, options);
 
-                return $context.each(function() {
+                    return $context.each(function() {
 
-                    properties.$container = $(this);
+                        properties.$container = $(this);
 
-                    // if the plugin hasn't been initialized yet, add the data
-                    if (!methods.getData()) {
+                        // if the plugin hasn't been initialized yet, add the data
+                        if (!methods.getData(properties.$container)) {
+                            methods.addData();
+                        }
+                    });
+                },
+                set: function(options) {
+
+                    return $context.each(function() {
+
+                        methods.setPluginVars($(this), options)
+                               .setElementVars();
+
                         methods.addData();
+                   });
+                },
+                flyIn: function(options) {
+
+                    return $context.each(function() {
+
+                        methods.setPluginVars($(this), options)
+                               .setElementVars()
+                               .setTimelineVars();
+
+                        settings.timelineMaster.staggerFrom(properties.$elements, settings.duration, settings.flyInVars, settings.stagger, settings.position);
+                        methods.addData();
+                    });
+                },
+                fadeIn: function(options) {
+
+                    return $context.each(function() {
+
+                        methods.setPluginVars($(this), options)
+                               .setElementVars()
+                               .setTimelineVars();
+
+                        properties.$elements.show();
+
+                        settings.timelineMaster.to(properties.$elements, settings.duration, settings.fadeInVars, settings.position);
+                        methods.addData();
+                    });
+                },
+                fadeOut: function(options) {
+
+                    return $context.each(function() {
+
+                        methods.setPluginVars($(this), options)
+                               .setElementVars()
+                               .setTimelineVars();
+
+                        settings.timelineMaster.to(properties.$elements, settings.duration, settings.fadeOutVars, settings.position);
+                        methods.addData();
+                    });
+                },
+                scale: function(options) {
+
+                    return $context.each(function() {
+
+                        methods.setPluginVars($(this), options)
+                               .setElementVars()
+                               .setTimelineVars();
+
+                        settings.timelineMaster.to(properties.$elements, settings.duration, settings.scaleVars, settings.position);
+                        methods.addData();
+                    });
+                },
+                transform: function(options) {
+
+                    return $context.each(function() {
+
+                        methods.setPluginVars($(this), options)
+                               .setElementVars()
+                               .setTimelineVars();
+
+                        settings.timelineMaster.to(properties.$elements, settings.duration, settings.transformVars, settings.position);
+                        methods.addData();
+                    });
+                },
+                nest: function(options) {
+
+                    return $context.each(function() {
+
+                        methods.setPluginVars($(this), options)
+                               .setElementVars();
+
+                        _timelines = []; // holds all timelines to add simultaneously to timelineMaster
+
+                        properties.$elements.each(function(i) {
+
+                            var _data = methods.getData($(this));
+                            _timelines[i] = _data.settings.timelineMaster;
+                        });
+
+                        settings.timelineMaster.add(_timelines, settings.position, settings.alignment);
+                        methods.addData();
+                    });
+                },
+                pause: function(atTime) {
+
+                    return $context.each(function() {
+
+                        methods.setPluginVars($(this));
+                        if (atTime == undefined) { atTime = settings.timelineMaster.progress(); }
+
+                        settings.timelineMaster.pause(atTime);
+                    });
+                },
+                play: function(from) {
+
+                    return $context.each(function() {
+
+                        methods.setPluginVars($(this));
+                        if (from == undefined) { from = settings.timelineMaster.progress(); }
+
+                        settings.timelineMaster.play(from);
+                    });
+                },
+                resume: function(from) {
+
+                    return $context.each(function() {
+
+                        methods.setPluginVars($(this));
+                        if (from == undefined) { from = settings.timelineMaster.progress(); }
+
+                        settings.timelineMaster.resume(from);
+                    });
+                },
+                restart: function(includeDelay) {
+
+                    if (includeDelay == undefined) { includeDelay = false; }
+
+                    return $context.each(function() {
+
+                        methods.setPluginVars($(this));
+                        settings.timelineMaster.restart(includeDelay);
+                    });
+                },
+                setPluginVars: function($container, options) {
+
+                    // set/initialize the settings and properties vars for the plugin
+
+                    properties.$container = $container;
+                    var _data = methods.getData(properties.$container);
+
+                    if (_data != undefined) {
+                        settings = _data.settings;
                     }
-                });
-            },
-            set: function(options) {
 
-                return $context.each(function() {
+                    if (options == undefined) {
+                        options = {};
+                    }
 
-                    methods.setPluginVars($(this), options);
-                    settings.timelineMaster.set(properties.$elements, settings.setVars);
+                    settings = $.extend(true, settings, options);
+                    properties.$elements = properties.$container.find(settings.elementSelector);
 
-                    methods.addData(); // saves TimelineMax and settings to the container
-                });
-            },
-            flyIn: function(options) {
+                    return this; // return plugin's methods property for chainable method calling
+                },
+                setElementVars: function() {
 
-                return $context.each(function() {
+                    // utilize the timeline set method on defined elements
 
-                    methods.setPluginVars($(this), options);
-                    settings.timelineMaster.staggerFrom(properties.$elements, settings.duration, settings.flyInVars, 0.15);
+                    if (settings.setVars) {
+                        settings.timelineMaster.set(properties.$elements, settings.setVars, settings.position);
+                        settings.position = "+=0";
+                        settings.setVars = null;
+                    }
 
-                    methods.addData(); // saves TimelineMax and settings to the container
-                });
-            },
-            fadeIn: function(options) {
+                    return this; // return plugin's methods property for chainable method calling
+                },
+                setTimelineVars: function() {
 
-                return $context.each(function() {
+                    var _timelineVars = settings.timelineVars;
 
-                    methods.setPluginVars($(this), options);
-                    settings.timelineMaster.set(properties.$elements, settings.fadeStartVars)
-                            .to(properties.$elements, settings.duration, settings.fadeInVars);
+                    settings.timelineMaster.delay(_timelineVars.delay)
+                                           .repeat(_timelineVars.repeat)
+                                           .repeatDelay(_timelineVars.repeatDelay)
+                                           .yoyo(_timelineVars.yoyo)
+                                           .paused(_timelineVars.pause);
 
-                    methods.addData(); // saves TimelineMax and settings to the container
-                })
-            },
-            fadeOut: function(options) {
+                    var _eventCallback = _timelineVars.eventCallback;
 
-                return $context.each(function() {
+                    if (_eventCallback) {
+                        settings.timelineMaster.eventCallback(_eventCallback.typeOf, _eventCallback.callback);
+                    }
+                },
+                // saves TimelineMax and settings to the container
+                addData: function() {
 
-                    methods.setPluginVars($(this), options);
-                    settings.timelineMaster.set(properties.$elements, settings.fadeStartVars)
-                            .to(properties.$elements, settings.duration, settings.fadeOutVars);
+                    var _data = { settings: settings };
+                    properties.$container.data(namespace, _data);
 
-                    methods.addData(); // saves TimelineMax and settings to the container
-                })
-            },
-            setPluginVars: function($container, options) {
+                    return this; // return plugin's methods property for chainable method calling
+                },
+                getData: function($container) {
 
-                properties.$container = $container;
-                var _data = methods.getData();
-
-                if (_data != undefined) {
-                    settings = _data.settings;
+                    return $container.data(namespace);
                 }
-
-                settings = $.extend(true, settings, options);
-                properties.$elements = properties.$container.find(settings.elementSelector);
-
-                console.log("TIMELINE MASTER: ", settings.timelineMaster);
-            },
-            addData: function() {
-
-                var _data = { settings: settings };
-                properties.$container.data(namespace, _data);
-            },
-            getData: function() {
-
-                return properties.$container.data(namespace);
-            }
-        };
+            };
 
         //default code to run a specific method
         if (methods[method]) {

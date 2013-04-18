@@ -2,7 +2,6 @@ var mcdController = {
     console: {
         on: false,
         log: function(msg) {
-
             if(!icg.console.on) {
                 return;
             }
@@ -16,16 +15,12 @@ var mcdController = {
         }
     },
     run: function() {
-
-        // $(document).bind("allContentIsLoaded", icg.removeSplashScreen);
-        // $(document).bind("icgReady", icg.icgReadyHandler);
-        // $(document).trigger("icgFunctionalityLoading"); // triggers function loading
-
         $(window).load(mcdController.intializeAnimations);
+
+        daypartController.run();
         mcdController.setupFlashVideo();
     },
     setupFlashVideo: function() {
-
         // to play the pfe flash video
         if (swfobject.hasFlashPlayerVersion("9.0.0")) {
             var fn = function() {
@@ -63,64 +58,29 @@ var mcdController = {
         }
     },
     intializeAnimations: function() {
-
         mcdController.animatePromos();
         mcdController.animateEVMs();
     },
     animatePromos: function() {
-
         // promo animations
         $(".promo-container").each(function() {
             var _settings = $(this).data("promoAnimator");
             $(this).promoAnimator(_settings);
         });
-        
-        // promo animations
-        $(".menu-container").each(function() {
-            var _settings = $(this).data("promoAnimator");
-            $(this).promoAnimator(_settings);
-        });
-        
     },
     animateEVMs: function() {
-
-        // evm animations sequencing object
-        var _evmAnimations = [{
-                animation: "set",
-                elementSelector: ".evm-number, .evm-heading, .evm-description, .meal-items-image img, .evm-description-meal, .evm-alternate-sandwich, .evm-footnote, .evm-spacer",
-                setVars: {
-                    css: { alpha: 0 }
-                }
-            }, {
-                animation: "flyIn",
-                elementSelector: ".evm-item",
-                flyInVars: {
-                    ease: Power2.easeOut
-                }
-            }, {
-                animation: "fadeIn",
-                elementSelector: ".evm-number, .evm-heading, .evm-description, .evm-spacer",
-                duration: 2,
-                fadeInVars: {
-                    delay: 0.5
-                }
-            }, {
-                elementSelector: ".meal-items-image img",
-                duration: 0.5,
-                repeat: false
-            }];
-
-        var $evmContainer = $(".evm-container");
-
-        $.each(_evmAnimations, function(i) {
-            $evmContainer.timelineBuilder(_evmAnimations[i].animation, _evmAnimations[i]);
+        evmAnimations.run(); // run the evm animations
+    },
+    buildTimeline: function($container, animations) {
+        $.each(animations, function() {
+            $container.timelineBuilder(this.operation, this);
         });
+    },
+    controlTimeline: function($container, action, params) {
+        $container.timelineBuilder(action, params);
     }
 };
 
 $(document).ready(function() {
    mcdController.run();
-   
-   //initializes auto column split for menu items
-   $('.menu-content-list').makeacolumnlists({cols: 2, colWidth: 400, equalHeight: false});
 });

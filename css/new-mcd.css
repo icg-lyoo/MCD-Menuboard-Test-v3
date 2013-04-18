@@ -39,12 +39,12 @@ body {
 
 .dn-5panel-menu-board {
     width: 9600px;
-	height: 1080px; 
+	height: 1080px;
 }
 
 .five-by-one {
 	width: 9600px;
-	height: 1080px;    
+	height: 1080px;
 }
 
 ul {
@@ -112,7 +112,7 @@ li {
 }
 
 .evm-image .sandwich-item-image img {
-   position:absolute;
+    position:absolute;
     top:0;
     left:0;
 }
@@ -200,12 +200,12 @@ li {
 }
 
 .evm-footnote {
-    z-index:10;
-    position:relative;
-    font-size:14px;
-    top:105px;
-    padding:0 0 0 30px;
-    line-height:100%;
+    z-index: 10;
+    position: absolute;
+    font-size: 14px;
+    bottom: 5px;
+    padding: 0 0 0 30px;
+    line-height: 100%;
 }
 
 .evm-price-label-container {
@@ -250,9 +250,9 @@ li {
 
 .evm-calorie-container .pill{
     border-radius: 20px;
-    border:1px solid;
-    padding: 2px 4px 2px 4px;
+    border: 1px solid;
 }
+
 .calorie-content-container {
     float:left;
 }
@@ -289,7 +289,7 @@ li {
 }
 
 .menu-heading-category-span {
-    border-bottom:4px dotted; 
+    border-bottom:4px dotted;
 }
 .menu-heading-category-description {
     font-family: "DINOTCM";
@@ -372,52 +372,52 @@ li {
 }
 
 .pill-circle {
-    width:25px;
-    height:25px;
-    border:1px solid;
-    border-radius:13px;
-    float:left;
-    margin:6px 6px 0 0;
+    width: 25px;
+    height: 25px;
+    border: 1px solid;
+    border-radius: 13px;
+    float: left;
+    line-height: 100%;
+    margin: 6px 6px 0 0;
+    padding: 0px 4px 2px 6px;
     font-size: 24px;
+    text-align: center;
 }
 
-.pill-circle .pill-circle-span-s {
-    position:relative;
-    top:-11px;
-    left:8px;
+/* NOT NEEDED, nor the spans nested inside the divs .pill-circle */
+/*.pill-circle .pill-circle-span-s {
+    position: relative;
+    top: -11px;
+    left: 8px;
 }
 .pill-circle .pill-circle-span-m {
-    position:relative;
-    top:-9px;
-    left:5px;
+    position: relative;
+    top: -9px;
+    left: 5px;
 }
 .pill-circle .pill-circle-span-l {
-    position:relative;
+    position: relative;
     top:-8px;
     left:10px;
-}
+}*/
 
 .pill{
-    float:left;
-    clear:left;
-    font-size:20px;
+    float: left;
+    font-size: 20px;
     border-radius: 12px;
-    border:1px solid;
-    padding: 0px 4px 2px 6px;
-    line-height:100%;
-    text-align:center;
-    width:50px;
-    margin:10px 5px 0 0;
+    border: 1px solid;
+    text-align: center;
+    width: 50px;
+    margin: 1px 5px 0 0;
 }
 
 .menu-2col {
-    float:left;
-    width:50%;
-    
+    float: left;
+    width: 50%;
 }
 
 .evm-description-meal {
     float: left;
-	width:200px;
+	width: 200px;
 }
 
