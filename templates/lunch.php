@@ -1332,7 +1332,10 @@
                                             'price'=>'0.00',
                                             'label'=>'meal',
                                             'calorie'=>'0000-0000 Cal.',
-                                            'pill'=>false,
+                                            'pill'=>array(
+                                                'crispy',
+                                                'grilled',
+                                            ),
                                        ),
                                    ),
                                 ),
@@ -1364,7 +1367,10 @@
                                             'price'=>'0.00',
                                             'label'=>'meal',
                                             'calorie'=>'0000-0000 Cal.',
-                                            'pill'=>false,
+                                            'pill'=>array(
+                                                'crispy',
+                                                'grilled',
+                                            ),
                                        ),
                                    ),
                                 ),
@@ -1396,9 +1402,11 @@
                                             'price'=>'0.00',
                                             'label'=>'meal',
                                             'calorie'=>'0000-0000 Cal.',
-                                            'pill'=>false,
+                                            'pill'=>array(
+                                                'crispy',
+                                                'grilled',
+                                            ),
                                        ),
-                                       
                                    ),
                                 ),
                                 array(
@@ -1427,7 +1435,6 @@
                                             'calorie'=>'0000-0000 Cal.',
                                             'pill'=>false,
                                        ),
-                                       
                                    ),
                                 ),
                                 array(
@@ -1634,8 +1641,6 @@
                                             <?php $count++; ?>
                                     <?php endforeach; ?>
                                 </div>
-                                
-                                    
                             </div>
                             <div class="evm-heading"><span class="evm-heading-span"><?php print ucwords($evm['title']); ?></span></div>
                             <div class="evm-description">
@@ -1653,11 +1658,9 @@
                                         
                                         <?php if(!empty($evm['pricelabel']['sandwich']['pill'])): ?>
                                         <div class="calorie-description-container">
-                                            
                                             <span class="pill">grilled</span>
                                         </div>
                                         <?php endif;?>
-                                        
                                         
                                         <div class="calorie-content-container">
                                             <span class="calorie">0000-0000 Cal.</span>
@@ -1669,7 +1672,6 @@
                                         
                                         <?php if(!empty($evm['pricelabel']['sandwich']['pill'])): ?>
                                         <div class="calorie-description-container">
-                                            
                                             <span class="pill">crispy</span>
                                         </div>
                                         <?php endif;?>
@@ -1694,7 +1696,9 @@
                                         </div>
                                     </div>
                                     <div class="evm-calorie-container">
-                                        <div class="calorie-description-container"></div>
+                                        <div class="calorie-description-container">
+                                            <span class="pill">grilled</span>
+                                        </div>
                                         <div class="calorie-content-container">
                                             <span class="calorie">0000-0000 Cal.</span>
                                         </div>
@@ -1702,7 +1706,9 @@
                                     
                                     <?php if(!empty($evm['pricelabel']['sandwich']['pill'])): ?>
                                     <div class="evm-calorie-container">
-                                        <div class="calorie-description-container"></div>
+                                        <div class="calorie-description-container">
+                                            <span class="pill">crispy</span>
+                                        </div>
                                         <div class="calorie-content-container">
                                             <span class="calorie">0000-0000 Cal.</span>
                                         </div>
