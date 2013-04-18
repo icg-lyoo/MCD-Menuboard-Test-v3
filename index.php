@@ -19,8 +19,8 @@
 
 	</head>
 
-    <?php $promo_vars = '{"elementSelector": "img", "animation": "fadeInOut", "duration": 0.5, "interval": 5000}'; ?>
-    <?php $menu_vars = '{"elementSelector": "> div", "animation": "fadeInOut", "duration": 0.5, "interval": 5000}'; ?>
+    <?php $promo_vars = '{"elementSelector": "img", "animation": "slide", "duration": 0.5, "interval": 5000}'; ?>
+    <?php $menu_vars = '{"elementSelector": "> div", "animation": "slide", "duration": 0.5, "interval": 5000}'; ?>
 
 	<body id="five-by-one">
         <div id="menu-content" class="dn-5panel-menu-board">
