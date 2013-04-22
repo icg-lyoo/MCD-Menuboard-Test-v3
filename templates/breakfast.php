@@ -12,7 +12,6 @@
 
 <div id="zone2" class="zone half-wide">
                     
-                    
                     <div class="menu-container" data-promo-animator='<?php echo $menu_vars; ?>'>
                         
                         <div class="menu-content-container category-dollar-menu">
@@ -286,7 +285,7 @@
 </div>
 
 <div id="zone3" class="zone">
-                    <div class="menu-container" data-promo-animator='<?php echo $menu_vars; ?>'>
+                    <div class="menu-container" data-promo-animator='<?php echo $promo_vars; ?>'>
                         <div class="menu-content-container category-desserts-shake">
                             <style>
                                 .category-desserts-shake .menu-item-price {

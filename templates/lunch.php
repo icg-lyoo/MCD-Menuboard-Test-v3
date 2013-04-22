@@ -1637,7 +1637,7 @@
                                     <?php 
                                         $count = 1;
                                         foreach ($evm['img']['sandwich'] as $sandwich): ?>
-                                            <img <?php print ($count>=2)?'class="evm-alternate-sandwich" style="display:none;"':''; ?> src="./media/<?php print $sandwich; ?>"/>
+                                            <img <?php print ($count>=2)?'class="evm-alternate-sandwich" style="display: none;"':''; ?> src="./media/<?php print $sandwich; ?>"/>
                                             <?php $count++; ?>
                                     <?php endforeach; ?>
                                 </div>
@@ -1668,7 +1668,7 @@
                                     </div>
                                     
                                     <?php if(!empty($evm['pricelabel']['sandwich']['pill'])): ?>
-                                    <div class="evm-calorie-container evm-alternate-sandwich">
+                                    <div class="evm-calorie-container">
                                         
                                         <div class="calorie-description-container">
                                             <span class="pill">crispy</span>

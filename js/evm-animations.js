@@ -169,5 +169,12 @@ var evmAnimations = {
         // play evmSandwichToMeal timeline
         var $evmItems = $(evmAnimations.timelineTargetElements.sandwichToMeal);
         mcdController.controlTimeline($evmItems, "play");
+    },
+    killAnimations: function() {
+
+        $.each(evmAnimations.timelineTargetElements, function(key, targetElementSelector) {
+            var $container = $(targetElementSelector);
+            mcdController.killTimeline($container);
+        });
     }
 }

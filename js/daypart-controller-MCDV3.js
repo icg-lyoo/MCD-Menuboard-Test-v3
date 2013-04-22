@@ -1,17 +1,23 @@
 var daypartController = {
+    initialized: false,
     vars: {
         locationQueryStr: location.search,
         locationURL: location.hostname + location.pathname,
         daypartNames: ["breakfast", "lunch"],
-        switchAutoInterval: 20000
+        daypartContainerSelector: "#menu-content",
+        switchAutoIntervalID: null,
+        switchAutoIntervalFrequency: 20000
     },
     run: function() {
-        daypartController.switchDaypartOnKeyPress();
-        daypartController.switchDaypartAuto();
+        if (!daypartController.initialized) {
+            daypartController.initialized = true;
+
+            daypartController.switchDaypartOnKeyPress();
+            // daypartController.switchDaypartAuto();
+        }
     },
     // switch daypart on the fly (on keypress), if the current board is not showing the daypart pressed
     switchDaypartOnKeyPress: function() {
-
         $(document).keypress(function(e) {
 
             var _keyPressed = e.charCode,
@@ -31,24 +37,43 @@ var daypartController = {
     },
     // switch daypart automatically at specified interval
     switchDaypartAuto: function() {
-
         var _controllerVars = daypartController.vars,
             _daypartNames = _controllerVars.daypartNames,
             _i = 0;
 
-        setInterval(function() {
+        clearInterval(_controllerVars.switchAutoIntervalID);
 
+        _controllerVars.switchAutoIntervalID = setInterval(function() {
             daypartController.switchDaypart(_daypartNames[_i]);
             _i = ++_i >= _daypartNames.length ? 0 : _i;
-        }, _controllerVars.switchAutoInterval);
+        }, _controllerVars.switchAutoIntervalFrequency);
     },
     // switch daypart
     switchDaypart: function(daypartName) {
+        var _settings = { url: "?daypart=" + daypartName },
+            _callbacks = {
+                success: daypartController.ajaxSuccess,
+                error: daypartController.ajaxFail,
+                complete: daypartController.ajaxComplete
+            };
 
-        var _controllerVars = daypartController.vars;
+        ajaxHandler.call(_settings, _callbacks);
+    },
+    ajaxSuccess: function(data) {
+        var _controllerVars = daypartController.vars,
+            _callbacks = [mcdController.run];
 
-        if (_controllerVars.locationQueryStr.indexOf(daypartName) == -1) {
-            location.href = "?daypart=" + daypartName;
-        }
+        mcdController.killAnimations();
+
+        // replace existing HTML with the new daypart HTML
+        ajaxHandler.handleResponse("success", _controllerVars.daypartContainerSelector, "html", data, _callbacks);
+    },
+    ajaxFail: function(data) {
+        // call ajaxHandler method
+        mcdController.console.log("AJAX: error");
+    },
+    ajaxComplete: function(data) {
+        // call ajaxHandler method
+        mcdController.console.log("AJAX: complete");
     }
 };

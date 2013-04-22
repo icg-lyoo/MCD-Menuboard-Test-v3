@@ -1,8 +1,8 @@
 var mcdController = {
     console: {
-        on: false,
+        on: true,
         log: function(msg) {
-            if(!icg.console.on) {
+            if(!mcdController.console.on) {
                 return;
             }
 
@@ -14,16 +14,29 @@ var mcdController = {
             }
         }
     },
+    selectors: {
+        menuColumn: ".menu-content-list",
+        promoContainer: ".promo-container"
+    },
+    windowLoaded: false,
     run: function() {
-        $(window).load(mcdController.intializeAnimations);
+        if (mcdController.windowLoaded) {
+            mcdController.windowLoadedHandler();
+        } else {
+            $(window).load(mcdController.windowLoadedHandler);
+        }
 
         daypartController.run();
         mcdController.setupFlashVideo();
 
-        $('.menu-content-list').makeacolumnlists({cols: 2, colWidth: 400, equalHeight: false});
+        $(mcdController.selectors.menuColumn).makeacolumnlists({cols: 2, colWidth: 400, equalHeight: false});
+    },
+    windowLoadedHandler: function() {
+        mcdController.windowLoaded = true;
+        mcdController.intializeAnimations();
     },
     setupFlashVideo: function() {
-        // to play the pfe flash video
+        // to play the pe flash video
         if (swfobject.hasFlashPlayerVersion("9.0.0")) {
             var fn = function() {
 
@@ -63,15 +76,30 @@ var mcdController = {
         mcdController.animatePromos();
         mcdController.animateEVMs();
     },
+    killAnimations: function() {
+        mcdController.killPromoAnimations()
+                     .killEVMAnimations();
+    },
     animatePromos: function() {
         // promo animations
-        $(".promo-container").each(function() {
+        $(mcdController.selectors.promoContainer).each(function() {
             var _settings = $(this).data("promoAnimator");
             $(this).promoAnimator(_settings);
         });
     },
     animateEVMs: function() {
         evmAnimations.run(); // run the evm animations
+    },
+    killPromoAnimations: function() {
+        $(mcdController.selectors.promoContainer).each(function() {
+            $(this).promoAnimator("killAnimations");
+        });
+
+        return this;
+    },
+    killEVMAnimations: function() {
+        evmAnimations.killAnimations();
+        return this;
     },
     buildTimeline: function($container, animations) {
         $.each(animations, function() {
@@ -80,6 +108,9 @@ var mcdController = {
     },
     controlTimeline: function($container, action, params) {
         $container.timelineBuilder(action, params);
+    },
+    killTimeline: function($container) {
+        $container.timelineBuilder("kill");
     }
 };
 

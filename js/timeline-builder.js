@@ -200,6 +200,17 @@
                         settings.timelineMaster.restart(includeDelay);
                     });
                 },
+                // kills/stops timeline animations immediately, and releases it for garbage collection
+                kill: function() {
+
+                    return $context.each(function() {
+
+                        var _data = methods.getData($(this));
+
+                        _data.settings.timelineMaster.kill();
+                        $(this).removeData(namespace); // remove data namespace from DOM element
+                    });
+                },
                 setPluginVars: function($container, options) {
 
                     // set/initialize the settings and properties vars for the plugin

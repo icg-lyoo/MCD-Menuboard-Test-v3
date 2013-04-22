@@ -2,6 +2,7 @@
     $.fn.promoAnimator = function(method) {
 
         var $container = this,
+            namespace = "promoAnimator",
             settings = {
                 // element properties
                 elementSelector: $container.children(),
@@ -45,7 +46,6 @@
                     // hide the all the images but the first one
                     settings.$elements.hide();
                     settings.$currentElement.show();
-                    settings.$nextElement.show();
 
                     methods.runAnimation();
                 }
@@ -63,13 +63,14 @@
             slide: function() {
 
                 settings.elementIndex++; // shift to the next element's index; the way we will define next element
+                methods.slidePrepareNextElement();
                 methods.incrementElementIndex();
-                methods.slidePositionNextElement();
 
                 var _timelineObj = methods.slideGetTimelineObj(),
                     _tweenObj = methods.slideGetTweenObj();
 
                 _timelineObj.add(_tweenObj);
+                methods.addTimelineToContainer(_timelineObj);
             },
             slideGetTimelineObj: function() {
 
@@ -94,7 +95,7 @@
             slideOnCompleteHandler: function() {
 
                 methods.slideHandleCurrentElement();
-                methods.slideHandleNextElement();
+                methods.slidePrepareNextElement();
                 methods.incrementElementIndex();
 
                 this.invalidate();
@@ -102,37 +103,19 @@
             slideHandleCurrentElement: function() {
 
                 settings.$currentElement.hide();
-                settings.$currentElement = settings.$nextElement;
+                methods.setCurrentElement();
             },
-            slideHandleNextElement: function() {
+            slidePrepareNextElement: function() {
 
-                settings.$nextElement = settings.$elements.eq(settings.elementIndex);
-
-                methods.slidePositionNextElement();
-                settings.$nextElement.show();
-            },
-            slidePositionNextElement: function() {
+                methods.setNextElement();
 
                 var left = settings.$nextElement.width() * -1;
+
                 settings.$nextElement.css({left: left});
+                settings.$nextElement.show();
             },
-            getTimelineObj: function(vars) {
 
-                return new TimelineMax(vars);
-            },
-            getTweenObj: function(vars) {
-
-                return new TweenMax(settings.$elements, settings.duration, vars);
-            },
-            incrementElementIndex: function() {
-                // add +1 to index or loop back to 0 if we've reached the end
-                settings.elementIndex = (settings.elementIndex++ >= settings.totalElements - 1) ? 0 : settings.elementIndex;
-            },
             flip: function() {
-
-                // ignore click until any current animations have completed
-                if (settings.isAnimating) return;
-                settings.isAnimating = true;
 
                 var _index = settings.elementIndex;
 
@@ -146,7 +129,7 @@
                 var _tl = new TimelineLite({
                     onComplete: function() {
                         settings.$currentElement = settings.$elements.eq(_index);
-                        settings.isAnimating = false;
+                        methods.incrementElementIndex();
                     }
                 });
 
@@ -165,44 +148,164 @@
                     {css: {rotationY: -90, z: settings.flipDepth, rotationX: -_randomVal, alpha: 0.3}},
                     {css: {rotationY: 0, z: 0, rotationX: 0, alpha: 1}, ease: Expo.easeOut}
                 );
-                    
-                setInterval(methods.flip, settings.interval);
-//                setTimeout(methods.flip, settings.interval);
             },
+
             fadeInOut: function() {
 
-                // ignore click until any current animations have completed
-                if (settings.isAnimating) return;
-                settings.isAnimating = true;
+                settings.$elements.show().css("opacity", 0);
+                settings.$currentElement.css("opacity", 1);
 
-                var _index = settings.elementIndex;
+                /*settings.elementIndex++; // shift to the next element's index; the way we will define next element
+                methods.setNextElement();
+                methods.incrementElementIndex();*/
 
-                // add +1 to index or loop back to 0 if we've reached the end
-                _index = (_index++ >= settings.totalElements - 1) ? 0 : _index;
-                settings.elementIndex = _index;
+                var _timelineObj = methods.fadeInOutGetTimelineObjMaster(),
+                    _tweenObjCurrent = methods.fadeInOutGetTweenObjCurrent(),
+                    _tweenObjNext = methods.fadeInOutGetTweenObjNext();
 
-                var _tl = new TimelineLite({
-                    onComplete: function() {
-                        settings.$currentElement = settings.$elements.eq(_index);
-                        settings.isAnimating = false;
-                    }
+                // _timelineObj.add(_tweenObj);
+
+                ///////////////////////////////////////////////////////
+
+                // var tl = new TimelineMax({ repeat: -1 });
+
+                // TweenLite.set(settings.$elements, { alpha: 0 });
+                // TweenLite.set(settings.$currentElement, { alpha: 1 });
+
+                settings.$elements.each(function(i, element) {
+
+                    var position = (i == 0) ? 0 : "-=1";
+                    _timelineObj.add(TweenMax.to(element, 1, {css: {opacity: 1}, repeat: 1, repeatDelay: settings.interval / 1000, yoyo: true, ease: Linear.easeNone}), position);
                 });
 
-                _tl.to(settings.$currentElement, settings.duration / 2,
-                {css: {alpha: 0}, ease: Linear.easeNone}
-                );
+                // _timelineObj.add(_tweenObjCurrent);
+                // _timelineObj.add(_tweenObjNext);
+            },
+            fadeInOutGetTimelineObjMaster: function() {
 
-                _tl.append(function() {
-                    settings.$currentElement.hide();
-                    settings.$elements.eq(_index).show();
-                })
+                var _vars = {
+                        delay: settings.interval / 1000,
+                        repeat: -1,
+                        repeatDelay: settings.interval / 1000
+                    };
 
-                _tl.fromTo(settings.$elements.eq(_index), settings.duration / 2,
-                    {css: {alpha: 0}, ease: Linear.easeNone},
-                    {css: {alpha: 1}, ease: Linear.easeNone}
-                );
-                    
-                setInterval(methods.fadeInOut, settings.interval);
+                return methods.getTimelineObj(_vars);
+            },
+            fadeInOutGetTweenObjCurrent: function() {
+
+                var _vars = {
+                        css: { opacity: 0 },
+                        ease: Power3.easeOut,
+                        onComplete: methods.fadeInOutOnCompleteHandlerCurrent
+                    };
+
+                return methods.getTweenObj(_vars, settings.$currentElement);
+            },
+            fadeInOutGetTweenObjNext: function() {
+
+                var _vars = {
+                        css: { opacity: 1 },
+                        ease: Power3.easeOut,
+                        onComplete: methods.fadeInOutOnCompleteHandlerNext
+                    };
+
+                return methods.getTweenObj(_vars, settings.$nextElement);
+            },
+            fadeInOutGetTimelineObjSlave: function() {
+
+                var _vars = {
+                        ease: Power3.easeOut,
+                        onStart: function() { settings.$nextElement.show(); },
+                        onComplete: methods.fadeInOutOnCompleteHandler
+                    },
+                    _cssTransparent = {
+                        css: { opacity: 0 }
+                    },
+                    _cssOpaque = {
+                        css: { opacity: 1 }
+                    };
+
+                var _timelineObjSlave = methods.getTimelineObj(_vars)
+                                        .to(settings.$currentElement, settings.duration, _cssTransparent);
+                                        /*.add(function() {
+                                            settings.$currentElement.hide();
+                                            settings.$nextElement.show();
+                                        })
+                                        .invalidate()
+                                        .fromTo(settings.$nextElement, settings.duration / 2, _cssTransparent, _cssOpaque)*/
+                                        // .invalidate();
+
+                return _timelineObjSlave;
+            },
+            fadeInOutOnCompleteHandlerCurrent: function() {
+                // console.log("CURRENT complete");
+                settings.$currentElement.css("opacity", 1);
+                methods.setCurrentElement();
+                this.invalidate();
+            },
+            fadeInOutOnCompleteHandlerNext: function() {
+                // console.log("NEXT complete");
+                settings.$nextElement.css("opacity", 0);
+                methods.setNextElement();
+                methods.incrementElementIndex();
+
+                this.invalidate();
+            },
+            fadeInOutOnCompleteHandler: function() {
+                // console.log("complete");
+
+                // settings.$currentElement.hide();
+
+                methods.setCurrentElement();
+                methods.setNextElement();
+                methods.incrementElementIndex();
+
+                this.invalidate();
+            },
+
+            getTimelineObj: function(vars) {
+
+                return new TimelineMax(vars);
+            },
+            getTweenObj: function(vars, $target) {
+
+                $target = $target == undefined ? settings.$elements : $target;
+                return new TweenMax($target, settings.duration, vars);
+            },
+            incrementElementIndex: function() {
+
+                // add +1 to index or loop back to 0 if we've reached the end
+                settings.elementIndex = (settings.elementIndex++ >= settings.totalElements - 1) ? 0 : settings.elementIndex;
+            },
+            setCurrentElement: function() {
+
+                if (settings.$nextElement) {
+                    settings.$currentElement = settings.$nextElement;
+                } else {
+                    settings.$currentElement = settings.$elements.eq(settings.elementIndex);
+                }
+            },
+            setNextElement: function() {
+
+                settings.$nextElement = settings.$elements.eq(settings.elementIndex);
+            },
+            addTimelineToContainer: function(timelineObj) {
+
+                var _container = settings.$elements.closest($container),
+                    _containerData = _container.data();
+
+                _containerData[namespace].timelineObj = timelineObj;
+                return this; // return methods property for method chainability
+            },
+            killAnimations: function() {
+
+                return $container.each(function() {
+
+                    var _containerData = $(this).data();
+
+                    _containerData[namespace].timelineObj.kill();
+                    _containerData[namespace].timelineObj = null;
+                });
             }
         };
 
