@@ -100,9 +100,13 @@ li {
 }
 
 /*EVM Zone Styles*/
+.evm-container,
+#zone6 {
+    background: #ffffff url("../assets/evm_row_bg.jpg") repeat-y;
+}
+
 .evm-container {
     float:left;
-    background: #ffffff url("../assets/evm_row_bg.jpg") repeat-y top left scroll;
 }
 
 .evm-image .meal-items-image img {
@@ -380,7 +384,6 @@ li {
 .menu-content-container {
     height:inherit;
     position:relative;
-/*    background: url("../assets/menu_bg_full.jpg") no-repeat center center scroll;*/
 }
 
 .menu-featured-product {
