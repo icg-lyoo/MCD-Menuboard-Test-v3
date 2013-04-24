@@ -146,7 +146,8 @@
                     return $context.each(function() {
 
                         methods.setPluginVars($(this), options)
-                               .setElementVars();
+                               .setElementVars()
+                               .setTimelineVars();
 
                         _timelines = []; // holds all timelines to add simultaneously to timelineMaster
 
@@ -156,7 +157,7 @@
                             _timelines[i] = _data.settings.timelineMaster;
                         });
 
-                        settings.timelineMaster.add(_timelines, settings.position, settings.alignment);
+                        settings.timelineMaster.add(_timelines, settings.position, settings.alignment, settings.stagger);
                         methods.addData();
                     });
                 },
@@ -269,7 +270,14 @@
                 },
                 getData: function($container) {
 
-                    return $container.data(namespace);
+                    var _namespace = namespace;
+
+                    // if a namespace is provided in the options/settings, element data is from external plugin
+                    if (settings.namespace != undefined) {
+                        _namespace = settings.namespace;
+                    }
+
+                    return $container.data(_namespace);
                 }
             };
 

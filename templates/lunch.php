@@ -1,5 +1,5 @@
 <div id="zone1" class="zone half-wide">
-                    <div class="promo-container" data-promo-animator='<?php echo $promo_vars; ?>'>
+                    <div class="promo-container" data-carousel-animator='<?php echo $promo_vars; ?>'>
                         <ul>
                             <li><img src="./media/promo1.jpg"/></li>
                             <li><img src="./media/promo2.jpg"/></li>
@@ -13,7 +13,7 @@
 <div id="zone2" class="zone half-wide">
                     
                     
-                    <div class="menu-container" data-promo-animator='<?php echo $menu_vars; ?>'>
+                    <div class="menu-container" data-carousel-animator='<?php echo $menu1_vars; ?>'>
                         
                         <div class="menu-content-container category-dollar-classic">
                             
@@ -480,7 +480,7 @@
                     
                     
                     
-                    <div class="menu-container" data-promo-animator='<?php echo $menu_vars; ?>'>
+                    <div class="menu-container" data-carousel-animator='<?php echo $menu2_vars; ?>'>
                         
                         <div class="menu-content-container category-extra-value-menu">
                             
@@ -1737,7 +1737,7 @@
                 </div>
 
                 <div id="zone6" class="zone half-wide">
-                    <div class="promo-container" data-promo-animator='<?php echo $promo_vars; ?>'>
+                    <div class="promo-container" data-carousel-animator='<?php echo $promo_vars; ?>'>
                         <ul>
                             <li><img src="./media/promo3.jpg"/></li>
                             <li><img src="./media/promo4.jpg"/></li>

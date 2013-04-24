@@ -32,6 +32,7 @@ root {
 }
 
 body {
+    background: url("../assets/menu_bg_full.jpg") repeat-x;
     margin: 0;
     font-family: "DINOTC";
 /*    overflow:hidden;*/
@@ -48,23 +49,22 @@ body {
 }
 
 ul {
-	list-style:none;
-	margin:0;
-	padding:0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 li {
-	margin:0;
-	padding:0;
+	margin: 0;
+	padding: 0;
 }
 
 /*default zone size*/
 .zone {
-	float:left;
-    width:1920px;
-    height:1080px;
-    background: url("../assets/menu_bg_full.jpg") no-repeat center center scroll;
-    overflow:hidden;
+	float: left;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
 }
 
 .zone.half-wide {
@@ -106,33 +106,33 @@ li {
 }
 
 .evm-image .meal-items-image img {
-    position:absolute;
-    top:0;
-    left:0;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .evm-image .sandwich-item-image img {
-    position:absolute;
-    top:0;
-    left:0;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .evm-item {
     width: 480px;
     height: 360px;
-    float:left;
-    margin:0;
-    padding:0;
-    position:relative;
+    float: left;
+    margin: 0;
+    padding: 0;
+    position: relative;
 }
 
 .evm-spacer {
     width: 480px;
     height: 360px;
-    float:left;
-    margin:0;
-    padding:0;
-    position:relative;
+    float: left;
+    margin: 0;
+    padding: 0;
+    position: relative;
 }
 
 .evm-spacer.span2 {
@@ -142,13 +142,13 @@ li {
 .evm-number {
     background: url("../assets/evm_number_red.png") no-repeat center center scroll;
     color: #ffffff;
-    height:92px;
-    width:92px;
-    font-size:32px;
-    text-align:center;
-    line-height:85px;
-    margin:20px;
-    z-index:10;
+    height: 92px;
+    width: 92px;
+    font-size: 38px;
+    text-align: center;
+    line-height: 85px;
+    margin: 20px;
+    z-index: 10;
 }
 
 .evm-number.chicken {

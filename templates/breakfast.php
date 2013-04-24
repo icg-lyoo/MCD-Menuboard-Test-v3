@@ -1,5 +1,5 @@
 <div id="zone1" class="zone half-wide">
-                    <div class="promo-container" data-promo-animator='<?php echo $promo_vars; ?>'>
+                    <div class="promo-container" data-carousel-animator='<?php echo $promo_vars; ?>'>
                         <ul>
                             <li><img src="./media/brkfst_promo_1.jpg"/></li>
                             <li><img src="./media/brkfst_promo_2.jpg"/></li>
@@ -12,7 +12,7 @@
 
 <div id="zone2" class="zone half-wide">
                     
-                    <div class="menu-container" data-promo-animator='<?php echo $menu_vars; ?>'>
+                    <div class="menu-container" data-carousel-animator='<?php echo $menu1_vars; ?>'>
                         
                         <div class="menu-content-container category-dollar-menu">
                             
@@ -285,7 +285,7 @@
 </div>
 
 <div id="zone3" class="zone">
-                    <div class="menu-container" data-promo-animator='<?php echo $promo_vars; ?>'>
+                    <div class="menu-container" data-carousel-animator='<?php echo $menu2_vars; ?>'>
                         <div class="menu-content-container category-desserts-shake">
                             <style>
                                 .category-desserts-shake .menu-item-price {
@@ -1284,7 +1284,7 @@
 </div> <!-- end of zone 5 -->
 
 <div id="zone6" class="zone half-wide">
-                    <div class="promo-container" data-promo-animator='<?php echo $promo_vars; ?>'>
+                    <div class="promo-container" data-carousel-animator='<?php echo $promo_vars; ?>'>
                         <ul>
                             <li><img src="./media/brkfst_promo_3.jpg"/></li>
                             <li><img src="./media/brkfst_promo_4.jpg"/></li>

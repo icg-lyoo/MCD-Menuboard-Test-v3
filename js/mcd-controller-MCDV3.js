@@ -16,7 +16,8 @@ var mcdController = {
     },
     selectors: {
         menuColumn: ".menu-content-list",
-        promoContainer: ".promo-container"
+        promoContainer: ".promo-container",
+        menuContainer: ".menu-container"
     },
     windowLoaded: false,
     run: function() {
@@ -73,32 +74,44 @@ var mcdController = {
         }
     },
     intializeAnimations: function() {
-        mcdController.animatePromos();
+        mcdController.animateCarousels();
         mcdController.animateEVMs();
+        mcdController.animateIntro();
     },
     killAnimations: function() {
-        mcdController.killPromoAnimations()
-                     .killEVMAnimations();
+        mcdController.killCarouselAnimations()
+                     .killEVMAnimations()
+                     .killIntroAnimations();
     },
-    animatePromos: function() {
+    animateCarousels: function() {
         // promo animations
-        $(mcdController.selectors.promoContainer).each(function() {
-            var _settings = $(this).data("promoAnimator");
-            $(this).promoAnimator(_settings);
+        $(mcdController.selectors.promoContainer + ", " + mcdController.selectors.menuContainer).each(function() {
+            var _settings = $(this).data("carouselAnimator");
+            $(this).carouselAnimator(_settings);
         });
     },
     animateEVMs: function() {
         evmAnimations.run(); // run the evm animations
     },
-    killPromoAnimations: function() {
-        $(mcdController.selectors.promoContainer).each(function() {
-            $(this).promoAnimator("killAnimations");
+    animateIntro: function() {
+        introAnimations.run(); // run the intro animations
+    },
+    animateOutro: function() {
+        outroAnimations.run(); // run the outro animations
+    },
+    killCarouselAnimations: function() {
+        $(mcdController.selectors.promoContainer + ", " + mcdController.selectors.menuContainer).each(function() {
+            $(this).carouselAnimator("killAnimations");
         });
 
         return this;
     },
     killEVMAnimations: function() {
         evmAnimations.killAnimations();
+        return this;
+    },
+    killIntroAnimations: function() {
+        introAnimations.killAnimations();
         return this;
     },
     buildTimeline: function($container, animations) {

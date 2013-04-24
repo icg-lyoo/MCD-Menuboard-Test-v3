@@ -14,8 +14,6 @@ jQuery.fn.makeacolumnlists = function(settings){
             var ulPaddingTop = parseInt($(this).css('paddingTop').replace("px", ""));
             var ulMarginBot = parseInt($(this).css('marginBottom').replace("px", ""));
             
-            console.log(ulMarginBot);
-            
 //            Initial
             var heightSum = ulPaddingBot+ulPaddingTop+ulMarginBot;
             var perColCount=0;
@@ -31,8 +29,6 @@ jQuery.fn.makeacolumnlists = function(settings){
                
                
             });
-            
-            console.log(heightSum);
             
 			var y=jQuery('.li_container').size(),
 		    	height = 0, 

@@ -1,8 +1,9 @@
 <?php
     header('Content-type: text/html; charset=utf-8');
 
-    $promo_vars = '{"elementSelector": "img", "animation": "slide", "duration": 0.5, "interval": 5000}';
-    $menu_vars = '{"elementSelector": "> div", "animation": "slide", "duration": 0.5, "interval": 5000}';
+    $promo_vars = '{"elementSelector": "img", "animation": "slide", "duration": 0.5, "offset": 0.5, "interval": 5}';
+    $menu1_vars = '{"elementSelector": ".menu-content-container", "animation": "fadeInOut", "duration": 1, "interval": 20}';
+    $menu2_vars = '{"elementSelector": ".menu-content-container", "animation": "fadeInOut", "duration": 1, "delay": 0, "interval": 20}';
 
     $defaultDayart = 'lunch';
 
@@ -22,19 +23,24 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title></title>
+        <meta http-equiv="X-UA-Compatible" content="IE=10" />
         <meta charset='utf-8'>
+
+		<title></title>
+
 		<link rel="stylesheet" type="text/css" href="css/new-mcd.css" />
 
 		<script type="text/javascript" src="js/jquery-1.7.1.js"></script>
 		<script type="text/javascript" src="js/TweenMax.js"></script>
-		<script type="text/javascript" src="js/promo-animator.js"></script>
+		<script type="text/javascript" src="js/carousel-animator.js"></script>
 		<script type="text/javascript" src="js/timeline-builder.js"></script>
 		<script type="text/javascript" src="js/swfobject.js"></script>
 		<script type="text/javascript" src="js/icg-MCDV2.js"></script>
         <script type="text/javascript" src="js/ajaxHandler.js"></script>
         <script type="text/javascript" src="js/daypart-controller-MCDV3.js"></script>
         <script type="text/javascript" src="js/evm-animations.js"></script>
+        <script type="text/javascript" src="js/intro-animations.js"></script>
+        <script type="text/javascript" src="js/outro-animations.js"></script>
 		<script type="text/javascript" src="js/mcd-controller-MCDV3.js"></script>
         <script type="text/javascript" src="js/columnizer.js"></script>
 
