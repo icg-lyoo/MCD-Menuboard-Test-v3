@@ -1,16 +1,14 @@
 <?php
-    header('Content-type: text/html; charset=utf-8');
-
-    $promo_vars = '{"elementSelector": "img", "animation": "slide", "duration": 0.5, "offset": 0.5, "interval": 5}';
-    $menu1_vars = '{"elementSelector": ".menu-content-container", "animation": "fadeInOut", "duration": 1, "interval": 20}';
-    $menu2_vars = '{"elementSelector": ".menu-content-container", "animation": "fadeInOut", "duration": 1, "delay": 0, "interval": 20}';
+    $promo_vars = '{"elementSelector": "img", "animation": "slide", "duration": 0.5, "offset": -0.5, "overlap": 1, "delay": 8, "interval": 5}';
+    $menu1_vars = '{"elementSelector": ".menu-content-container", "animation": "fadeInOut", "duration": 0.5, "interval": 20}';
+    $menu2_vars = '{"elementSelector": ".menu-content-container", "animation": "fadeInOut", "duration": 0.5, "delay": 0, "interval": 20}';
 
     $defaultDayart = 'lunch';
 
     $daypart = isset($_GET['daypart']) && !empty($_GET['daypart']) ? $_GET['daypart'] : $defaultDayart;
     $path = 'templates/' . $daypart . '.php';
 
-    if (!empty($_GET)) {
+    if (isset($_GET['daypart']) && !empty($_GET['daypart'])) {
         ob_start();
         include($path);
         $output = ob_get_clean();
@@ -19,7 +17,6 @@
         exit;
     }
 ?>
-
 <!DOCTYPE html>
 <html>
 	<head>

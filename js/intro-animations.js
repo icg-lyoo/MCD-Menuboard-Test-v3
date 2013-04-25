@@ -11,6 +11,9 @@ var introAnimations = {
         var _menuContentAnimations = [{
                 operation: "set",
                 elementSelector: mcdController.selectors.promoContainer + ", " + mcdController.selectors.menuContainer,
+                timelineVars: {
+                    delay: 2.5
+                },
                 setVars: {
                     css: { alpha: 0 }
                 }
@@ -21,26 +24,14 @@ var introAnimations = {
                     css: { alpha: 1 }
                 }
             }, {
-                operation: "nest",
-                elementSelector: evmAnimations.timelineTargetElements.intro,
-                timelineVars: {
-                    delay: 2.5
-                }
-            }, {
                 operation: "fadeIn",
                 elementSelector: mcdController.selectors.promoContainer,
-                duration: 2,
-                position: "-=2"
+                duration: 0.5
             }, {
                 operation: "fadeIn",
                 elementSelector: mcdController.selectors.menuContainer,
-                duration: 2,
-                position: "-=1.5"
-            }, {
-                operation: "nest",
-                elementSelector: mcdController.selectors.promoContainer + ", " + mcdController.selectors.menuContainer,
-                namespace: "carouselAnimator",
-                alignment: "normal"
+                duration: 0.5,
+                position: "-=0.25"
             }];
 
         var $menuContent = $(this.timelineTargetElements.main);

@@ -1,13 +1,13 @@
 <div id="zone1" class="zone half-wide">
                     <div class="promo-container" data-carousel-animator='<?php echo $promo_vars; ?>'>
                         <ul>
-                            <li><img src="./media/promo1.jpg"/></li>
-                            <li><img src="./media/promo2.jpg"/></li>
-                            <li><img src="./media/promo3.jpg"/></li>
-                            <li><img src="./media/promo4.jpg"/></li>
+                            <li><img src="./media/all-upsell-zone1-1.jpg"/></li>
+                            <li><img src="./media/all-upsell-zone1-2.jpg"/></li>
+                            <li><img src="./media/all-upsell-zone1-3.jpg"/></li>
                             <div class="clear"></div>
                         </ul>
                     </div>
+                    <div class="zone-inset-shadow-r"></div>
 </div> <!-- end of zone 1 -->
 
 <div id="zone2" class="zone half-wide">
@@ -57,7 +57,7 @@
                                         <div class="menu-item-details">
                                             <ul>
                                                 <li>
-                                                    <span class="menu-item-calorie">000 Cal.</span>
+                                                    <span class="menu-item-calorie">310 Cal.</span>
                                                 </li>
                                             </ul>
                                         </div>
@@ -68,7 +68,7 @@
                                         <div class="menu-item-details">
                                             <ul>
                                                 <li>
-                                                    <span class="menu-item-calorie">000 Cal.</span>
+                                                    <span class="menu-item-calorie">390 Cal.</span>
                                                 </li>
                                             </ul>
                                         </div>
@@ -80,40 +80,40 @@
                                         <div class="menu-item-details">
                                             <ul>
                                                 <li>
-                                                    <span class="menu-item-calorie">000 Cal.</span>
+                                                    <span class="menu-item-calorie">360 Cal.</span>
                                                 </li>
                                             </ul>
                                         </div>
                                     </li>
                                     
                                     <li>
-                                        <div class="menu-item-title"><span class="menu-item-title-span">Sweet Tea</span></div>
+                                        <div class="menu-item-title"><span class="menu-item-title-span">Fruit 'N Yogurt Parfait</span></div>
                                         <div class="menu-item-details">
                                             <ul>
                                                 <li>
-                                                    <span class="menu-item-calorie">000 Cal.</span>
+                                                    <span class="menu-item-calorie">150 Cal.</span>
                                                 </li>
                                             </ul>
                                         </div>
                                     </li>
                                     
                                     <li>
-                                        <div class="menu-item-title"><span class="menu-item-title-span">Side Salad</span></div>
+                                        <div class="menu-item-title"><span class="menu-item-title-span">Soft Drink</span></div>
                                         <div class="menu-item-details">
                                             <ul>
                                                 <li>
-                                                    <span class="menu-item-calorie">000 Cal.</span>
+                                                    <span class="menu-item-calorie">0-350 Cal.</span>
                                                 </li>
                                             </ul>
                                         </div>
                                     </li>
                                     
                                     <li>
-                                        <div class="menu-item-title"><span class="menu-item-title-span">2 for 3 Cookie</span></div>
+                                        <div class="menu-item-title"><span class="menu-item-title-span">Apple Slices</span></div>
                                         <div class="menu-item-details">
                                             <ul>
                                                 <li>
-                                                    <span class="menu-item-calorie">000 Cal.</span>
+                                                    <span class="menu-item-calorie">15 Cal.</span>
                                                 </li>
                                             </ul>
                                         </div>
@@ -122,22 +122,22 @@
                                     
                                     
                                     <li>
-                                        <div class="menu-item-title"><span class="menu-item-title-span">Local Option</span></div>
+                                        <div class="menu-item-title"><span class="menu-item-title-span">Small Fries</span></div>
                                         <div class="menu-item-details">
                                             <ul>
                                                 <li>
-                                                    <span class="menu-item-calorie">000 Cal.</span>
+                                                    <span class="menu-item-calorie">230 Cal.</span>
                                                 </li>
                                             </ul>
                                         </div>
                                     </li>
                                     
                                     <li>
-                                        <div class="menu-item-title"><span class="menu-item-title-span">Local Option</span></div>
+                                        <div class="menu-item-title"><span class="menu-item-title-span">2 Pies</span></div>
                                         <div class="menu-item-details">
                                             <ul>
                                                 <li>
-                                                    <span class="menu-item-calorie">000 Cal.</span>
+                                                    <span class="menu-item-calorie">500 Cal.</span>
                                                 </li>
                                             </ul>
                                         </div>
@@ -148,23 +148,23 @@
                                         <div class="menu-item-details clear-left">
                                             <ul>
                                                 <li>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    <span class="menu-item-calorie">000 Cal.</span>
+                                                    <span class="menu-item-price">0.89</span>
+                                                    <span class="menu-item-calorie">250 Cal.</span>
                                                 </li>
                                             </ul>
                                         </div>
                                     </li>
-                                    <li>
+                                    <!--<li>
                                         <div class="menu-item-title"><span class="menu-item-title-span">Cheeseburger</span></div>
                                         <div class="menu-item-details clear-left">
                                             <ul>
                                                 <li>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    <span class="menu-item-calorie">000 Cal.</span>
+                                                    <span class="menu-item-price">0.99</span>
+                                                    <span class="menu-item-calorie">300 Cal.</span>
                                                 </li>
                                             </ul>
                                         </div>
-                                    </li>
+                                    </li>-->
                                     
                                     <li>
                                         <div class="menu-item-title"><span class="menu-item-title-span">French Fries</span></div>
@@ -172,18 +172,18 @@
                                             <ul>
                                                 <li>
                                                     <div class="pill-circle"><span class="pill-circle-span-s">s</span></div>
-                                                    <span class="menu-item-price">0.99</span>
-                                                    <span class="menu-item-calorie">0000-0000 Cal.</span>
+                                                    <span class="menu-item-price">1.00</span>
+                                                    <span class="menu-item-calorie">230 Cal.</span>
                                                 </li>
                                                 <li>
                                                     <div class="pill-circle"><span class="pill-circle-span-m">m</span></div>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    <span class="menu-item-calorie">0000-0000 Cal.</span>
+                                                    <span class="menu-item-price">1.59</span>
+                                                    <span class="menu-item-calorie">380 Cal.</span>
                                                 </li>
                                                 <li>
                                                     <div class="pill-circle"><span class="pill-circle-span-l">l</span></div>
-                                                    <span class="menu-item-price">2.99</span>
-                                                    <span class="menu-item-calorie">0000-0000 Cal.</span>
+                                                    <span class="menu-item-price">1.89</span>
+                                                    <span class="menu-item-calorie">500 Cal.</span>
                                                 </li>
                                             </ul>
                                         </div>
@@ -245,8 +245,8 @@
                                         <div class="menu-item-details">
                                             <ul>
                                                 <li>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    <span class="menu-item-calorie">000 Cal.</span>
+                                                    <span class="menu-item-price">2.69</span>
+                                                    <span class="menu-item-calorie">250 Cal.</span>
                                                 </li>
                                             </ul>
                                         </div>
@@ -256,8 +256,8 @@
                                         <div class="menu-item-details">
                                             <ul>
                                                 <li>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    <span class="menu-item-calorie">000 Cal.</span>
+                                                    <span class="menu-item-price">2.99</span>
+                                                    <span class="menu-item-calorie">300 Cal.</span>
                                                 </li>
                                             </ul>
                                         </div>
@@ -267,8 +267,8 @@
                                         <div class="menu-item-details">
                                             <ul>
                                                 <li>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    <span class="menu-item-calorie">000 Cal.</span>
+                                                    <span class="menu-item-price">3.39</span>
+                                                    <span class="menu-item-calorie">190 Cal.</span>
                                                 </li>
                                             </ul>
                                         </div>
@@ -287,8 +287,8 @@
                                         <div class="menu-item-details">
                                             <ul>
                                                 <li>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    <span class="menu-item-calorie">000 Cal.</span>
+                                                    <span class="menu-item-price">3.49</span>
+                                                    <span class="menu-item-calorie">390 Cal.</span>
                                                 </li>
                                             </ul>
                                         </div>
@@ -299,8 +299,8 @@
                                         <div class="menu-item-details">
                                             <ul>
                                                 <li>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    <span class="menu-item-calorie">000 Cal.</span>
+                                                    <span class="menu-item-price">3.99</span>
+                                                    <span class="menu-item-calorie">280 Cal.</span>
                                                 </li>
                                             </ul>
                                         </div>
@@ -313,13 +313,13 @@
                                             <span class="menu-item-block-text-span">fat-free chocolate 100-130 Cal.</span>
                                         </div>
                                         <div class="menu-item-block-text">
-                                            <span class="menu-item-block-text-span">fat-free chocolate 100-130 Cal.</span>
+                                            <span class="menu-item-block-text-span">100% Apple Juice 100 Cal.</span>
                                         </div>
                                         <div class="menu-item-block-text">
-                                            <span class="menu-item-block-text-span">fat-free chocolate 100-130 Cal.</span>
+                                            <span class="menu-item-block-text-span">Kids Soft Drink 0-120 Cal.</span>
                                         </div>
                                         <div class="menu-item-block-text">
-                                            <span class="menu-item-block-text-span">fat-free chocolate 100-130 Cal.</span>
+                                            <span class="menu-item-block-text-span">Small Soft Drink* 0-160 Cal.</span>
                                         </div>
                                     </li>
                                     <li class="menu-item-disclaimer">
@@ -340,30 +340,31 @@
                         
                         
                         
-                        <div class="menu-content-container category-happy-meal">
+                        <div class="menu-content-container">
                             
                             <style>
-                                .category-happy-meal .menu-item-price {
-                                    color: #D3371E;
+                                .category-salads .menu-item-price {
+                                    color: #009246;
                                 }
-                                .category-happy-meal .menu-heading-category-span {
-                                    border-color: #D3371E;
-                                    color: #D3371E;
+                                .category-salads .menu-heading-category-span {
+                                    border-color: #009246;
+                                    color: #009246;
                                 }
-                                .category-happy-meal .pill-circle {
-                                    border-color: #D3371E;
-                                    color: #D3371E;
-                                }
-
-                                .category-happy-meal .menu-heading-category-description-span {
-                                    color: #D3371E;
+                                .category-salads .pill-circle {
+                                    border-color: #009246;
+                                    color: #009246;
                                 }
 
-                                .category-happy-meal .menu-category-subheading {
-                                    color: #D3371E;
+                                .category-salads .menu-heading-category-description-span {
+                                    color: #009246;
+									font-size:28px;
                                 }
-                                .category-happy-meal .menu-category-subheading-description {
-                                    color: #D3371E;
+
+                                .category-salads .menu-category-subheading {
+                                    color: #009246;
+                                }
+                                .category-salads .menu-category-subheading-description {
+                                    color: #009246;
                                 }
 
 
@@ -375,10 +376,15 @@
                             
                             <!-- For 2 col menu layout need the extra divs to segment-->
                             <div class="menu-2col-wrapper">
-                                <div class="menu-2col">
+                                <div class="menu-2col category-salads">
                                     <div class="menu-heading">
                                         <div class="menu-heading-category">
                                             <span class="menu-heading-category-span">salads</span>
+											<div class="menu-heading-category-description">
+												<span class="menu-heading-category-description-span">
+                                           	 	includes your choice of grilled/crispy chicken
+                                        		</span>
+											</div>
                                         </div>
                                     </div>
                                     <div class="menu-content">
@@ -388,8 +394,8 @@
                                                 <div class="menu-item-details">
                                                     <ul>
                                                         <li>
-                                                            <span class="menu-item-price">1.99</span>
-                                                            <span class="menu-item-calorie">000 Cal.</span>
+                                                            <span class="menu-item-price">4.79</span>
+                                                            <span class="menu-item-calorie">Grilled 290 Cal. | Crispy 450 Cal.</span>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -399,8 +405,8 @@
                                                 <div class="menu-item-details">
                                                     <ul>
                                                         <li>
-                                                            <span class="menu-item-price">1.99</span>
-                                                            <span class="menu-item-calorie">000 Cal.</span>
+                                                            <span class="menu-item-price">4.59</span>
+                                                            <span class="menu-item-calorie">Grilled 230 Cal. | Crispy 390 Cal.</span>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -410,8 +416,8 @@
                                                 <div class="menu-item-details">
                                                     <ul>
                                                         <li>
-                                                            <span class="menu-item-price">1.99</span>
-                                                            <span class="menu-item-calorie">000 Cal.</span>
+                                                            <span class="menu-item-price">4.59</span>
+                                                            <span class="menu-item-calorie">Grilled 190 Cal. | Crispy 350 Cal.</span>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -421,10 +427,36 @@
                                     </div>
                                 </div>
                                 
-                                <div class="menu-2col">
+							<style>
+                                .category-fruitoatmeal .menu-item-price {
+                                    color: #f7941e;
+                                }
+                                .category-fruitoatmeal .menu-heading-category-span {
+                                    border-color: #f7941e;
+                                    color: #f7941e;
+                                }
+                                .category-fruitoatmeal .pill-circle {
+                                    border-color: #f7941e;
+                                    color: #f7941e;
+                                }
+
+                                .category-fruitoatmeal .menu-heading-category-description-span {
+                                    color: #f7941e;
+                                }
+
+                                .category-fruitoatmeal .menu-category-subheading {
+                                    color: #f7941e;
+                                }
+                                .category-fruitoatmeal .menu-category-subheading-description {
+                                    color: #f7941e;
+                                }
+                            </style>
+								
+                                <div class="menu-2col category-fruitoatmeal">
                                     <div class="menu-heading">
                                         <div class="menu-heading-category">
                                             <span class="menu-heading-category-span">fruit & oatmeal</span>
+											
                                         </div>
                                     </div>
                                     <div class="menu-content">
@@ -435,7 +467,7 @@
                                                     <ul>
                                                         <li>
                                                             <span class="menu-item-price">1.99</span>
-                                                            <span class="menu-item-calorie">000 Cal.</span>
+                                                            <span class="menu-item-calorie">290 Cal.</span>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -520,65 +552,51 @@
                             <div class="menu-content">
                                 <ul class="menu-content-list">
                                     <li>
-                                        <div class="menu-item-title"><span class="menu-item-title-span">Daily Double</span></div>
+                                        <div class="menu-item-title"><span class="menu-item-title-span">Daily Double©</span></div>
                                         <div class="menu-item-details">
                                             <ul>
                                                 <li>
                                                     <span class="menu-item-price">1.99</span>
-                                                    <span class="menu-item-calorie">0000-0000 Cal.</span>
+                                                    <span class="menu-item-calorie">440 Cal.</span>
                                                 </li>
                                             </ul>
                                         </div>
                                         
                                     </li>
                                     <li>
-                                        <div class="menu-item-title"><span class="menu-item-title-span">20pc Chicken McNuggets</span></div>
+                                        <div class="menu-item-title"><span class="menu-item-title-span">20pc Chicken McNuggets©</span></div>
                                         <div class="menu-item-details">
                                             <ul>
                                                 <li>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    <span class="menu-item-calorie">0000-0000 Cal.</span>
+                                                    <span class="menu-item-price">4.99</span>
+                                                    <span class="menu-item-calorie">940 Cal.</span>
                                                 </li>
                                             </ul>
                                         </div>
                                         
                                     </li>
                                     <li>
-                                        <div class="menu-item-title"><span class="menu-item-title-span">20pc. Chicken McNuggets</span></div>
-                                        <div class="menu-item-description"><span class="menu-item-description-span">includes 2 med. drinks & 2med. fries</span></div>
+                                        <div class="menu-item-title"><span class="menu-item-title-span">Angus Snack Wraps©</span></div>
+                                        <div class="menu-item-description"><span class="menu-item-description-span">Deluxe | Bacon & Cheese | Mushroom & Swiss</span></div>
                                         
                                         <div class="menu-item-details">
                                             <ul>
                                                 <li>
                                                     <span class="menu-item-price">1.99</span>
-                                                    <span class="menu-item-calorie">0000-0000 Cal.</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        
-                                    </li>
-                                    <li>
-                                        <div class="menu-item-title"><span class="menu-item-title-span">Angus Snack Wraps</span></div>
-                                        <div class="menu-item-description"><span class="menu-item-description-span">deluxe | bacon & cheese | mushroom & swiss</span></div>
-                                        
-                                        <div class="menu-item-details">
-                                            <ul>
-                                                <li>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    <span class="menu-item-calorie">0000-0000 Cal.</span>
+                                                    <span class="menu-item-calorie">390-430 Cal.</span>
                                                 </li>
                                             </ul>
                                         </div>
                                     </li>
                                     <li>
-                                        <div class="menu-item-title"><span class="menu-item-title-span">Chicken Snack Wraps</span></div>
-                                        <div class="menu-item-description"><span class="menu-item-description-span">chipotle bbq | honey mustard | ranch</span></div>
+                                        <div class="menu-item-title"><span class="menu-item-title-span">Chicken Snack Wraps©</span></div>
+                                        <div class="menu-item-description"><span class="menu-item-description-span">Chipotle bbq | BBQ | honey mustard | ranch</span></div>
                                         
                                         <div class="menu-item-details">
                                             <ul>
                                                 <li>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    <span class="menu-item-calorie">0000-0000 Cal.</span>
+                                                    <span class="menu-item-price">1.59</span>
+                                                    <span class="menu-item-calorie">250-350 Cal.</span>
                                                 </li>
                                             </ul>
                                         </div>
@@ -588,81 +606,32 @@
                                         <div class="menu-item-details">
                                             <ul>
                                                 <li>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    <span class="menu-item-calorie">0000-0000 Cal.</span>
+                                                    <span class="menu-item-price">1.29</span>
+                                                    <span class="menu-item-calorie">440 Cal.</span>
                                                 </li>
                                             </ul>
                                         </div>
                                     </li>
-                                    
-                                    <li>
-                                        <div class="menu-item-title"><span class="menu-item-title-span">Iced Coffee</span></div>
+									<li>
+                                        <div class="menu-item-title"><span class="menu-item-title-span">Grilled Onion Cheddar DBL</span>
+										</div>
                                         <div class="menu-item-details">
                                             <ul>
                                                 <li>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    <span class="menu-item-calorie">0000-0000 Cal.</span>
-                                                </li>
-                                                <li>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    <span class="menu-item-calorie">0000-0000 Cal.</span>
-                                                </li>
-                                                <li>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    <span class="menu-item-calorie">0000-0000 Cal.</span>
+                                                    <span class="menu-item-price">2.00</span>
+                                                    <span class="menu-item-calorie">450 Cal.</span>
                                                 </li>
                                             </ul>
                                         </div>
                                     </li>
-                                    
-                                    <li>
-                                        <div class="menu-item-title"><span class="menu-item-title-span">McFlurry</span></div>
-                                        <div class="menu-item-description"><span class="menu-item-description-span">reese's | m&m's | oreo cookie</span></div>
+									<li>
+                                        <div class="menu-item-title"><span class="menu-item-title-span">Grilled Onion Cheddar Triple</span>
+										</div>
                                         <div class="menu-item-details">
                                             <ul>
                                                 <li>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    <span class="menu-item-calorie">0000-0000 Cal.</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    
-                                    <li>
-                                        <div class="menu-item-title"><span class="menu-item-title-span">Local Option</span></div>
-                                        <div class="menu-item-details">
-                                            <ul>
-                                                <li>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    <span class="menu-item-calorie">0000-0000 Cal.</span>
-                                                </li>
-                                                <li>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    <span class="menu-item-calorie">0000-0000 Cal.</span>
-                                                </li>
-                                                <li>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    <span class="menu-item-calorie">0000-0000 Cal.</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    
-                                    <li>
-                                        <div class="menu-item-title"><span class="menu-item-title-span">Local Option</span></div>
-                                        <div class="menu-item-details">
-                                            <ul>
-                                                <li>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    <span class="menu-item-calorie">0000-0000 Cal.</span>
-                                                </li>
-                                                <li>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    <span class="menu-item-calorie">0000-0000 Cal.</span>
-                                                </li>
-                                                <li>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    <span class="menu-item-calorie">0000-0000 Cal.</span>
+                                                    <span class="menu-item-price">3.00</span>
+                                                    <span class="menu-item-calorie">540 Cal.</span>
                                                 </li>
                                             </ul>
                                         </div>
@@ -689,43 +658,43 @@
                             <div class="menu-content">
                                 <ul class="menu-content-list">
                                     <li>
-                                        <div class="menu-item-title"><span class="menu-item-title-span">McCafe Shakes</span></div>
+                                        <div class="menu-item-title"><span class="menu-item-title-span">McCafe© Shakes</span></div>
                                         <div class="menu-item-description"><span class="menu-item-description-span">chocolate | vanilla | strawberry</span></div>
                                         <div class="menu-item-details">
                                             <ul>
                                                 <li>
                                                     <div class="pill-circle"><span class="pill-circle-span-s">s</span></div>
                                                     <span class="menu-item-price">1.99</span>
-                                                    <span class="menu-item-calorie">0000-0000 Cal.</span>
+                                                    <span class="menu-item-calorie">530 Cal.</span>
                                                 </li>
                                                 <li>
                                                     <div class="pill-circle"><span class="pill-circle-span-m">m</span></div>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    <span class="menu-item-calorie">0000-0000 Cal.</span>
+                                                    <span class="menu-item-price">2.49</span>
+                                                    <span class="menu-item-calorie">640 Cal.</span>
                                                 </li>
                                                 <li>
                                                     <div class="pill-circle"><span class="pill-circle-span-l">l</span></div>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    <span class="menu-item-calorie">0000-0000 Cal.</span>
+                                                    <span class="menu-item-price">2.79</span>
+                                                    <span class="menu-item-calorie">870 Cal.</span>
                                                 </li>
                                             </ul>
                                         </div>
 
                                     </li>
                                     <li>
-                                        <div class="menu-item-title"><span class="menu-item-title-span">McFlurry</span></div>
+                                        <div class="menu-item-title"><span class="menu-item-title-span">McFlurry©</span></div>
                                         <div class="menu-item-description"><span class="menu-item-description-span">reese's | m&m's | oreo cookies</span></div>
                                         <div class="menu-item-details">
                                             <ul>
                                                 <li>
                                                     <div class="pill"><span class="pill-span">snack</span></div>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    <span class="menu-item-calorie">0000-0000 Cal.</span>
+                                                    <span class="menu-item-price">1.79</span>
+                                                    <span class="menu-item-calorie">340 Cal.</span>
                                                 </li>
                                                 <li>
                                                     <div class="pill"><span class="pill-span">reg.</span></div>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    <span class="menu-item-calorie">0000-0000 Cal.</span>
+                                                    <span class="menu-item-price">2.39</span>
+                                                    <span class="menu-item-calorie">650 Cal.</span>
                                                 </li>
                                             </ul>
                                         </div>
@@ -738,114 +707,66 @@
                                         <div class="menu-item-details">
                                             <ul>
                                                 <li>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    <span class="menu-item-calorie">0000-0000 Cal.</span>
+                                                    <span class="menu-item-price">1.19</span>
+                                                    <span class="menu-item-calorie">280-385 Cal.</span>
                                                 </li>
                                             </ul>
                                         </div>
 
                                     </li>
+									<li>
+                                        <div class="menu-item-title"><span class="menu-item-title-span">Pie</span></div>
+                                        <div class="menu-item-description"><span class="menu-item-description-span">apple</span></div>
+
+                                        <div class="menu-item-details">
+                                            <ul>
+                                                <li>
+                                                    <span class="menu-item-price">0.69</span>
+                                                    <span class="menu-item-calorie">250 Cal.</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                    </li>
+									<li>
+                                        <div class="menu-item-title"><span class="menu-item-title-span">Cinnamon Melts©</span></div>
+
+                                        <div class="menu-item-details">
+                                            <ul>
+                                                <li>
+                                                    <span class="menu-item-price">1.59</span>
+                                                    <span class="menu-item-calorie">460 Cal.</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                    </li>
+									<li>
+                                        <div class="menu-item-title"><span class="menu-item-title-span">Vanilla Cone</span></div>
+                                        
+                                        <div class="menu-item-details">
+                                            <ul>
+                                                <li>
+                                                    <span class="menu-item-price">1.00</span>
+                                                    <span class="menu-item-calorie">170 Cal.</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+									
                                     <li>
                                         <div class="menu-item-title"><span class="menu-item-title-span">Soft Baked Cookies</span></div>
-                                        <div class="menu-item-description"><span class="menu-item-description-span">chocolate chip | oatmeal raisin | sugar</span></div>
+                                        <div class="menu-item-description"><span class="menu-item-description-span">3 for $1</span></div>
 
                                         <div class="menu-item-details">
                                             <ul>
                                                 <li>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    <span class="menu-item-calorie">0000-0000 Cal.</span>
+                                                    <span class="menu-item-price">1.00</span>
+                                                    <span class="menu-item-calorie">150-160 Cal.</span>
                                                 </li>
                                             </ul>
                                         </div>
                                     </li>
-                                    <li>
-                                        <div class="menu-item-title"><span class="menu-item-title-span">Pies</span></div>
-                                        <div class="menu-item-description"><span class="menu-item-description-span">apple | cherry</span></div>
-
-                                        <div class="menu-item-details">
-                                            <ul>
-                                                <li>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    <span class="menu-item-calorie">0000-0000 Cal.</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="menu-item-title"><span class="menu-item-title-span">Vanilla Cone</span></div>
-                                        <div class="menu-item-description"><span class="menu-item-description-span">vanilla reduced fat</span></div>
-                                        <div class="menu-item-details">
-                                            <ul>
-                                                <li>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    <span class="menu-item-calorie">0000-0000 Cal.</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-
-                                    <li>
-                                        <div class="menu-item-title"><span class="menu-item-title-span">Local Option</span></div>
-                                        <div class="menu-item-description"><span class="menu-item-description-span">description</span></div>
-                                        <div class="menu-item-details">
-                                            <ul>
-                                                <li>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    <span class="menu-item-calorie">0000-0000 Cal.</span>
-                                                </li>
-                                                <li>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    <span class="menu-item-calorie">0000-0000 Cal.</span>
-                                                </li>
-                                                <li>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    <span class="menu-item-calorie">0000-0000 Cal.</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-
-                                    <li>
-                                        <div class="menu-item-title"><span class="menu-item-title-span">Local Option</span></div>
-                                        <div class="menu-item-details">
-                                            <ul>
-                                                <li>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    <span class="menu-item-calorie">0000-0000 Cal.</span>
-                                                </li>
-                                                <li>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    <span class="menu-item-calorie">0000-0000 Cal.</span>
-                                                </li>
-                                                <li>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    <span class="menu-item-calorie">0000-0000 Cal.</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-
-                                    <li>
-                                        <div class="menu-item-title"><span class="menu-item-title-span">Local Option</span></div>
-                                        <div class="menu-item-details">
-                                            <ul>
-                                                <li>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    <span class="menu-item-calorie">0000-0000 Cal.</span>
-                                                </li>
-                                                <li>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    <span class="menu-item-calorie">0000-0000 Cal.</span>
-                                                </li>
-                                                <li>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    <span class="menu-item-calorie">0000-0000 Cal.</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-
-
                                 </ul>
 
                             </div>
@@ -924,225 +845,174 @@
                             <div class="menu-content">
                                 <ul class="menu-content-list">
                                     <li>
-                                        <div class="menu-item-title"><span class="menu-item-title-span">Soft Drinks</span><span class="menu-item-calorie">0000-0000 Cal.</span></div>
-                                        <div class="menu-item-description"><span class="menu-item-description-span">any size</span></div>
+                                        <div class="menu-item-title"><span class="menu-item-title-span">Soft Drinks</span><span class="menu-item-calorie">0-350 Cal.</span></div>
+                                        
                                         <div class="menu-item-details">
                                             <ul>
                                                 <li>
                                                     <div class="pill-circle"><span class="pill-circle-span-s">s</span></div>
-                                                    <span class="menu-item-price">1.99</span>
+                                                    <span class="menu-item-price">1.00</span>
                                                 </li>
                                                 <li>
                                                     <div class="pill-circle"><span class="pill-circle-span-m">m</span></div>
-                                                    <span class="menu-item-price">1.99</span>
+                                                    <span class="menu-item-price">1.00</span>
                                                 </li>
                                                 <li>
                                                     <div class="pill-circle"><span class="pill-circle-span-l">l</span></div>
-                                                    <span class="menu-item-price">1.99</span>
+                                                    <span class="menu-item-price">1.00</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                    </li>
+									<li>
+                                        <div class="menu-item-title"><span class="menu-item-title-span">Premium Roast Coffee</span><span class="menu-item-calorie">0 Cal.</span></div>
+                                        
+                                        <div class="menu-item-details">
+                                            <ul>
+                                                <li>
+                                                    <div class="pill-circle"><span class="pill-circle-span-s">s</span></div>
+                                                    <span class="menu-item-price">1.00</span>
+                                                </li>
+                                                <li>
+                                                    <div class="pill-circle"><span class="pill-circle-span-m">m</span></div>
+                                                    <span class="menu-item-price">1.00</span>
+                                                </li>
+                                                <li>
+                                                    <div class="pill-circle"><span class="pill-circle-span-l">l</span></div>
+                                                    <span class="menu-item-price">1.00</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                    </li>
+									<li>
+                                        <div class="menu-item-title"><span class="menu-item-title-span">Minute Maid© Orange Juice</span><span class="menu-item-calorie">150-280 Cal.</span></div>
+                                        <div class="menu-item-details">
+                                            <ul>
+                                                <li>
+                                                    <div class="pill-circle"><span class="pill-circle-span-s">s</span></div>
+                                                    <span class="menu-item-price">1.29</span>
+                                                    
+                                                </li>
+                                                <li>
+                                                    <div class="pill-circle"><span class="pill-circle-span-m">m</span></div>
+                                                    <span class="menu-item-price">1.59</span>
+                                                </li>
+                                                <li>
+                                                    <div class="pill-circle"><span class="pill-circle-span-l">l</span></div>
+                                                    <span class="menu-item-price">1.89</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                    </li>
+									<li>
+                                        <div class="menu-item-title"><span class="menu-item-title-span">Minute Maid© Apple Juice</span><span class="menu-item-calorie">100 Cal.</span></div>
+                                        <div class="menu-item-details">
+                                            <ul>
+                                                <li>
+                                                    <div class="pill-circle"><span class="pill-circle-span-s">s</span></div>
+                                                    <span class="menu-item-price">1.00</span>
+                                                    
+                                                </li>
+                                                <li>
+                                                    <div class="pill-circle"><span class="pill-circle-span-m">m</span></div>
+                                                    <span class="menu-item-price">1.00</span>
+                                                </li>
+                                                <li>
+                                                    <div class="pill-circle"><span class="pill-circle-span-l">l</span></div>
+                                                    <span class="menu-item-price">1.00</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                    </li>
+									<li>
+                                        <div class="menu-item-title"><span class="menu-item-title-span">1% Low Fat Milk</span><span class="menu-item-calorie">100 Cal.</span></div>
+                                        <div class="menu-item-details">
+                                            <ul>
+                                                <li>
+                                                    <div class="pill-circle"><span class="pill-circle-span-s">s</span></div>
+                                                    <span class="menu-item-price">1.00</span>
+                                                    
+                                                </li>
+                                                <li>
+                                                    <div class="pill-circle"><span class="pill-circle-span-m">m</span></div>
+                                                    <span class="menu-item-price">1.00</span>
+                                                </li>
+                                                <li>
+                                                    <div class="pill-circle"><span class="pill-circle-span-l">l</span></div>
+                                                    <span class="menu-item-price">1.00</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                    </li>
+									<li>
+                                        <div class="menu-item-title"><span class="menu-item-title-span">Fat-Free Chocolate Milk</span><span class="menu-item-calorie">130 Cal.</span></div>
+                                        <div class="menu-item-details">
+                                            <ul>
+                                                <li>
+                                                    <span class="menu-item-price">1.00</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                    </li>
+									<li>
+                                        <div class="menu-item-title"><span class="menu-item-title-span">Dasani© Bottled Water</span><span class="menu-item-calorie">0 Cal.</span></div>
+                                        <div class="menu-item-details">
+                                            <ul>
+                                                <li>
+                                                    <span class="menu-item-price">1.00</span>
                                                 </li>
                                             </ul>
                                         </div>
 
                                     </li>
                                     <li>
-                                        <div class="menu-item-title"><span class="menu-item-title-span">Iced Tea</span><span class="menu-item-calorie">0000-0000 Cal.</span></div>
+                                        <div class="menu-item-title"><span class="menu-item-title-span">Iced Tea</span><span class="menu-item-calorie">0 Cal.</span></div>
                                         <div class="menu-item-description"><span class="menu-item-description-span">sweet or unsweet | any size</span></div>
                                         <div class="menu-item-details">
                                             <ul>
                                                 <li>
                                                     <div class="pill-circle"><span class="pill-circle-span-s">s</span></div>
-                                                    <span class="menu-item-price">1.99</span>
+                                                    <span class="menu-item-price">1.00</span>
                                                 </li>
                                                 <li>
                                                     <div class="pill-circle"><span class="pill-circle-span-m">m</span></div>
-                                                    <span class="menu-item-price">1.99</span>
+                                                    <span class="menu-item-price">1.00</span>
                                                 </li>
                                                 <li>
                                                     <div class="pill-circle"><span class="pill-circle-span-l">l</span></div>
-                                                    <span class="menu-item-price">1.99</span>
+                                                    <span class="menu-item-price">1.00</span>
                                                 </li>
                                             </ul>
                                         </div>
 
                                     </li>
-                                    <li>
-                                        <div class="menu-item-title"><span class="menu-item-title-span">Minute Maid Orange Juice</span><span class="menu-item-calorie">0000-0000 Cal.</span></div>
-                                        <div class="menu-item-details">
-                                            <ul>
-                                                <li>
-                                                    <div class="pill-circle"><span class="pill-circle-span-s">s</span></div>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    
-                                                </li>
-                                                <li>
-                                                    <div class="pill-circle"><span class="pill-circle-span-m">m</span></div>
-                                                    <span class="menu-item-price">1.99</span>
-                                                </li>
-                                                <li>
-                                                    <div class="pill-circle"><span class="pill-circle-span-l">l</span></div>
-                                                    <span class="menu-item-price">1.99</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-
-                                    </li>
-                                    <li>
-                                        <div class="menu-item-title"><span class="menu-item-title-span">Milk</span><span class="menu-item-calorie">0000-0000 Cal.</span></div>
-                                        <div class="menu-item-description"><span class="menu-item-description-span">1% low-fat white | fat-free chocolate</span></div>
-                                        <div class="menu-item-details">
-                                            <ul>
-                                                <li>
-                                                    <div class="pill-circle"><span class="pill-circle-span-s">s</span></div>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    
-                                                </li>
-                                                <li>
-                                                    <div class="pill-circle"><span class="pill-circle-span-m">m</span></div>
-                                                    <span class="menu-item-price">1.99</span>
-                                                </li>
-                                                <li>
-                                                    <div class="pill-circle"><span class="pill-circle-span-l">l</span></div>
-                                                    <span class="menu-item-price">1.99</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-
-                                    </li>
-                                    <li>
-                                        <div class="menu-item-title"><span class="menu-item-title-span">Dasani Bottled Water</span><span class="menu-item-calorie">0000-0000 Cal.</span></div>
-                                        <div class="menu-item-details">
-                                            <ul>
-                                                <li>
-                                                    <div class="pill-circle"><span class="pill-circle-span-s">s</span></div>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    
-                                                </li>
-                                                <li>
-                                                    <div class="pill-circle"><span class="pill-circle-span-m">m</span></div>
-                                                    <span class="menu-item-price">1.99</span>
-                                                </li>
-                                                <li>
-                                                    <div class="pill-circle"><span class="pill-circle-span-l">l</span></div>
-                                                    <span class="menu-item-price">1.99</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-
-                                    </li>
-                                    <li>
-                                        <div class="menu-item-title"><span class="menu-item-title-span">Optional</span><span class="menu-item-calorie">0000-0000 Cal.</span></div>
+									<li>
+                                        <div class="menu-item-title"><span class="menu-item-title-span">Sweet Tea</span><span class="menu-item-calorie">0000-0000 Cal.</span></div>
                                         <div class="menu-item-description"><span class="menu-item-description-span">sweet or unsweet | any size</span></div>
                                         <div class="menu-item-details">
                                             <ul>
                                                 <li>
                                                     <div class="pill-circle"><span class="pill-circle-span-s">s</span></div>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    
+                                                    <span class="menu-item-price">1.00</span>
                                                 </li>
                                                 <li>
                                                     <div class="pill-circle"><span class="pill-circle-span-m">m</span></div>
-                                                    <span class="menu-item-price">1.99</span>
+                                                    <span class="menu-item-price">1.00</span>
                                                 </li>
                                                 <li>
                                                     <div class="pill-circle"><span class="pill-circle-span-l">l</span></div>
-                                                    <span class="menu-item-price">1.99</span>
+                                                    <span class="menu-item-price">1.00</span>
                                                 </li>
                                             </ul>
                                         </div>
 
                                     </li>
-                                    <li>
-                                        <div class="menu-item-title"><span class="menu-item-title-span">Optional</span><span class="menu-item-calorie">0000-0000 Cal.</span></div>
-                                        <div class="menu-item-description"><span class="menu-item-description-span">sweet or unsweet | any size</span></div>
-                                        <div class="menu-item-details">
-                                            <ul>
-                                                <li>
-                                                    <div class="pill-circle"><span class="pill-circle-span-s">s</span></div>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    
-                                                </li>
-                                                <li>
-                                                    <div class="pill-circle"><span class="pill-circle-span-m">m</span></div>
-                                                    <span class="menu-item-price">1.99</span>
-                                                </li>
-                                                <li>
-                                                    <div class="pill-circle"><span class="pill-circle-span-l">l</span></div>
-                                                    <span class="menu-item-price">1.99</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-
-                                    </li>
-                                    <li>
-                                        <div class="menu-item-title"><span class="menu-item-title-span">Optional</span><span class="menu-item-calorie">0000-0000 Cal.</span></div>
-                                        <div class="menu-item-description"><span class="menu-item-description-span">sweet or unsweet | any size</span></div>
-                                        <div class="menu-item-details">
-                                            <ul>
-                                                <li>
-                                                    <div class="pill-circle"><span class="pill-circle-span-s">s</span></div>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    
-                                                </li>
-                                                <li>
-                                                    <div class="pill-circle"><span class="pill-circle-span-m">m</span></div>
-                                                    <span class="menu-item-price">1.99</span>
-                                                </li>
-                                                <li>
-                                                    <div class="pill-circle"><span class="pill-circle-span-l">l</span></div>
-                                                    <span class="menu-item-price">1.99</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-
-                                    </li>
-                                    <li>
-                                        <div class="menu-item-title"><span class="menu-item-title-span">Optional</span><span class="menu-item-calorie">0000-0000 Cal.</span></div>
-                                        <div class="menu-item-description"><span class="menu-item-description-span">sweet or unsweet | any size</span></div>
-                                        <div class="menu-item-details">
-                                            <ul>
-                                                <li>
-                                                    <div class="pill-circle"><span class="pill-circle-span-s">s</span></div>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    
-                                                </li>
-                                                <li>
-                                                    <div class="pill-circle"><span class="pill-circle-span-m">m</span></div>
-                                                    <span class="menu-item-price">1.99</span>
-                                                </li>
-                                                <li>
-                                                    <div class="pill-circle"><span class="pill-circle-span-l">l</span></div>
-                                                    <span class="menu-item-price">1.99</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-
-                                    </li>
-                                    <li>
-                                        <div class="menu-item-title"><span class="menu-item-title-span">Optional</span><span class="menu-item-calorie">0000-0000 Cal.</span></div>
-                                        <div class="menu-item-description"><span class="menu-item-description-span">sweet or unsweet | any size</span></div>
-                                        <div class="menu-item-details">
-                                            <ul>
-                                                <li>
-                                                    <div class="pill-circle"><span class="pill-circle-span-s">s</span></div>
-                                                    <span class="menu-item-price">1.99</span>
-                                                    
-                                                </li>
-                                                <li>
-                                                    <div class="pill-circle"><span class="pill-circle-span-m">m</span></div>
-                                                    <span class="menu-item-price">1.99</span>
-                                                </li>
-                                                <li>
-                                                    <div class="pill-circle"><span class="pill-circle-span-l">l</span></div>
-                                                    <span class="menu-item-price">1.99</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-
-                                    </li>
-                                    
-                                    
-
-
                                 </ul>
 
                             </div>
@@ -1154,7 +1024,7 @@
                 </div> <!-- end of zone 3 -->
 
                 <div id="zone4" class="zone">
-                    <div id="pe-container"></div>
+                    <div id="pe-container-lunch"></div>
                     <div class="clear"></div>
                 </div>
 
@@ -1177,27 +1047,27 @@
                                         ),
                                    'pricelabel'=>array(
                                         'sandwich'=>array(
-                                            'price'=>'0.00',
+                                            'price'=>'3.59',
                                             'label'=>'sandwich',
-                                            'calorie'=>'0000-0000 Cal.',
+                                            'calorie'=>'550 Cal.',
                                             'pill'=>false,
                                         ),
                                        'meal'=>array(
-                                            'price'=>'0.00',
+                                            'price'=>'5.49',
                                             'label'=>'meal',
-                                            'calorie'=>'0000-0000 Cal.',
+                                            'calorie'=>'930-1170 Cal.',
                                             'pill'=>false,
                                        ),
                                        
                                    ),
                                 ),
                                 array(
-                                  'title'=>'Double Cheeseburger',
+                                  'title'=>'Two Cheeseburger',
                                   'category'=>'burger',
                                   'color'=>'#C40516',
                                   'img'=> array(
                                             'sandwich'=>array(
-                                                '_0002_02_dcb_5p_ld.png'
+                                                '_0005_05_tcb_5p_ld.png'
                                             ),
                                             'meal'=>array(
                                                 'fries.png',
@@ -1206,18 +1076,17 @@
                                         ),
                                    'pricelabel'=>array(
                                         'sandwich'=>array(
-                                            'price'=>'0.00',
+                                            'price'=>'0.99',
                                             'label'=>'sandwich',
-                                            'calorie'=>'0000-0000 Cal.',
+                                            'calorie'=>'600 Cal.',
                                             'pill'=>false,
                                         ),
                                        'meal'=>array(
-                                            'price'=>'0.00',
+                                            'price'=>'4.49',
                                             'label'=>'meal',
-                                            'calorie'=>'0000-0000 Cal.',
+                                            'calorie'=>'980-1220 Cal.',
                                             'pill'=>false,
                                        ),
-                                       
                                    ),
                                 ),
                                 array(
@@ -1235,15 +1104,15 @@
                                         ),
                                    'pricelabel'=>array(
                                         'sandwich'=>array(
-                                            'price'=>'0.00',
+                                            'price'=>'3.49',
                                             'label'=>'sandwich',
-                                            'calorie'=>'0000-0000 Cal.',
+                                            'calorie'=>'520 Cal.',
                                             'pill'=>false,
                                         ),
                                        'meal'=>array(
-                                            'price'=>'0.00',
+                                            'price'=>'5.39',
                                             'label'=>'meal',
-                                            'calorie'=>'0000-0000 Cal.',
+                                            'calorie'=>'900-1140 Cal.',
                                             'pill'=>false,
                                        ),
                                    ),
@@ -1263,55 +1132,26 @@
                                         ),
                                    'pricelabel'=>array(
                                         'sandwich'=>array(
-                                            'price'=>'0.00',
+                                            'price'=>'4.49',
                                             'label'=>'sandwich',
-                                            'calorie'=>'0000-0000 Cal.',
+                                            'calorie'=>'750 Cal.',
                                             'pill'=>false,
                                         ),
                                        'meal'=>array(
-                                            'price'=>'0.00',
+                                            'price'=>'6.39',
                                             'label'=>'meal',
-                                            'calorie'=>'0000-0000 Cal.',
+                                            'calorie'=>'1130-1370 Cal.',
                                             'pill'=>false,
                                        ),
                                    ),
                                 ),
-                                array(
-                                  'title'=>'Two Cheeseburger',
-                                  'category'=>'burger',
-                                  'color'=>'#C40516',
-                                  'img'=> array(
-                                            'sandwich'=>array(
-                                                '_0005_05_tcb_5p_ld.png'
-                                            ),
-                                            'meal'=>array(
-                                                'fries.png',
-                                                'coke.png',
-                                            ),
-                                        ),
-                                   'pricelabel'=>array(
-                                        'sandwich'=>array(
-                                            'price'=>'0.00',
-                                            'label'=>'sandwich',
-                                            'calorie'=>'0000-0000 Cal.',
-                                            'pill'=>false,
-                                        ),
-                                       'meal'=>array(
-                                            'price'=>'0.00',
-                                            'label'=>'meal',
-                                            'calorie'=>'0000-0000 Cal.',
-                                            'pill'=>false,
-                                       ),
-                                   ),
-                                ),
-                                array(
-                                  'title'=>'premium chicken classic',
+								array(
+                                  'title'=>'filet-o-fish',
                                   'category'=>'chicken',
                                   'color'=>'#752D8F',
                                   'img'=> array(
                                             'sandwich'=>array(
-                                                'grilled'=>'_0015_06_pcc_grilled_5p_ld.png',
-                                                'crispy'=>'_0006_06_pcc_5p_ld.png',
+                                                '_0011_11_fof_5p_ld.png'
                                             ),
                                             'meal'=>array(
                                                 'fries.png',
@@ -1320,18 +1160,77 @@
                                         ),
                                    'pricelabel'=>array(
                                         'sandwich'=>array(
-                                            'price'=>'0.00',
+                                            'price'=>'3.39',
                                             'label'=>'sandwich',
-                                            'calorie'=>'0000-0000 Cal.',
+                                            'calorie'=>'380 Cal.',
+                                            'pill'=>false,
+                                        ),
+                                       'meal'=>array(
+                                            'price'=>'5.29',
+                                            'label'=>'meal',
+                                            'calorie'=>'760-1000 Cal.',
+                                            'pill'=>false,
+                                       ),
+                                       
+                                   ),
+                                ),
+								array(
+                                  'title'=>'Double Cheeseburger',
+                                  'category'=>'burger',
+                                  'color'=>'#C40516',
+                                  'img'=> array(
+                                            'sandwich'=>array(
+                                                '_0002_02_dcb_5p_ld.png'
+                                            ),
+                                            'meal'=>array(
+                                                'fries.png',
+                                                'coke.png',
+                                            ),
+                                        ),
+                                   'pricelabel'=>array(
+                                        'sandwich'=>array(
+                                            'price'=>'1.29',
+                                            'label'=>'sandwich',
+                                            'calorie'=>'440 Cal.',
+                                            'pill'=>false,
+                                        ),
+                                       'meal'=>array(
+                                            'price'=>'3.69',
+                                            'label'=>'meal',
+                                            'calorie'=>'820-1060 Cal.',
+                                            'pill'=>false,
+                                       ),
+                                       
+                                   ),
+                                ),
+								array(
+                                  'title'=>'premium chicken ranch BLT',
+                                  'category'=>'chicken',
+                                  'color'=>'#752D8F',
+                                  'img'=> array(
+                                            'sandwich'=>array(
+                                                'grilled'=>'_0017_08_pcr_blt_grilled_5p_ld.png',
+                                                'crispy'=>'_0008_08_pcr_blt_5p_ld.png',
+                                            ),
+                                            'meal'=>array(
+                                                'fries.png',
+                                                'coke.png',
+                                            ),
+                                        ),
+                                   'pricelabel'=>array(
+                                        'sandwich'=>array(
+                                            'price'=>'3.99',
+                                            'label'=>'sandwich',
+                                            'calorie'=>array('540 Cal.','380 Cal.'),
                                             'pill'=>array(
                                                 'crispy',
                                                 'grilled',
                                             ),
                                         ),
                                        'meal'=>array(
-                                            'price'=>'0.00',
+                                            'price'=>'5.79',
                                             'label'=>'meal',
-                                            'calorie'=>'0000-0000 Cal.',
+                                            'calorie'=>array('760-1000 Cal.','920-1160 Cal.'),
                                             'pill'=>array(
                                                 'crispy',
                                                 'grilled',
@@ -1355,18 +1254,18 @@
                                         ),
                                    'pricelabel'=>array(
                                         'sandwich'=>array(
-                                            'price'=>'0.00',
+                                            'price'=>'4.29',
                                             'label'=>'sandwich',
-                                            'calorie'=>'0000-0000 Cal.',
+                                            'calorie'=>array('460 Cal.','620 Cal.'),
                                             'pill'=>array(
                                                 'crispy',
                                                 'grilled',
                                             ),
                                         ),
                                        'meal'=>array(
-                                            'price'=>'0.00',
+                                            'price'=>'6.49',
                                             'label'=>'meal',
-                                            'calorie'=>'0000-0000 Cal.',
+                                            'calorie'=>array('840-1080 Cal.','1000-1240 Cal.'),
                                             'pill'=>array(
                                                 'crispy',
                                                 'grilled',
@@ -1375,13 +1274,13 @@
                                    ),
                                 ),
                                 array(
-                                  'title'=>'premium chicken ranch BLT',
+                                  'title'=>'premium chicken classic',
                                   'category'=>'chicken',
                                   'color'=>'#752D8F',
                                   'img'=> array(
                                             'sandwich'=>array(
-                                                'grilled'=>'_0017_08_pcr_blt_grilled_5p_ld.png',
-                                                'crispy'=>'_0008_08_pcr_blt_5p_ld.png',
+                                                'grilled'=>'_0015_06_pcc_grilled_5p_ld.png',
+                                                'crispy'=>'_0006_06_pcc_5p_ld.png',
                                             ),
                                             'meal'=>array(
                                                 'fries.png',
@@ -1390,18 +1289,18 @@
                                         ),
                                    'pricelabel'=>array(
                                         'sandwich'=>array(
-                                            'price'=>'0.00',
+                                            'price'=>'3.89',
                                             'label'=>'sandwich',
-                                            'calorie'=>'0000-0000 Cal.',
+                                            'calorie'=>array('350 Cal.','510 Cal.'),
                                             'pill'=>array(
                                                 'crispy',
                                                 'grilled',
                                             ),
                                         ),
                                        'meal'=>array(
-                                            'price'=>'0.00',
+                                            'price'=>'6.49',
                                             'label'=>'meal',
-                                            'calorie'=>'0000-0000 Cal.',
+                                            'calorie'=>array('730-970 Cal.','890-1130 Cal.'),
                                             'pill'=>array(
                                                 'crispy',
                                                 'grilled',
@@ -1409,6 +1308,8 @@
                                        ),
                                    ),
                                 ),
+                                
+                                
                                 array(
                                   'title'=>'southern style crispy chicken',
                                   'category'=>'chicken',
@@ -1424,15 +1325,15 @@
                                         ),
                                    'pricelabel'=>array(
                                         'sandwich'=>array(
-                                            'price'=>'0.00',
+                                            'price'=>'3.39',
                                             'label'=>'sandwich',
-                                            'calorie'=>'0000-0000 Cal.',
+                                            'calorie'=>'420 Cal.',
                                             'pill'=>false,
                                         ),
                                        'meal'=>array(
-                                            'price'=>'0.00',
+                                            'price'=>'5.29',
                                             'label'=>'meal',
-                                            'calorie'=>'0000-0000 Cal.',
+                                            'calorie'=>'800-1040 Cal.',
                                             'pill'=>false,
                                        ),
                                    ),
@@ -1452,49 +1353,21 @@
                                         ),
                                    'pricelabel'=>array(
                                         'sandwich'=>array(
-                                            'price'=>'0.00',
+                                            'price'=>'3.79',
                                             'label'=>'sandwich',
-                                            'calorie'=>'0000-0000 Cal.',
+                                            'calorie'=>'470 Cal.',
                                             'pill'=>false,
                                         ),
                                        'meal'=>array(
-                                            'price'=>'0.00',
+                                            'price'=>'5.69',
                                             'label'=>'meal',
-                                            'calorie'=>'0000-0000 Cal.',
+                                            'calorie'=>'850-1090 Cal.',
                                             'pill'=>false,
                                        ),
                                        
                                    ),
                                 ),
-                                array(
-                                  'title'=>'filet-o-fish',
-                                  'category'=>'chicken',
-                                  'color'=>'#752D8F',
-                                  'img'=> array(
-                                            'sandwich'=>array(
-                                                '_0011_11_fof_5p_ld.png'
-                                            ),
-                                            'meal'=>array(
-                                                'fries.png',
-                                                'coke.png',
-                                            ),
-                                        ),
-                                   'pricelabel'=>array(
-                                        'sandwich'=>array(
-                                            'price'=>'0.00',
-                                            'label'=>'sandwich',
-                                            'calorie'=>'0000-0000 Cal.',
-                                            'pill'=>false,
-                                        ),
-                                       'meal'=>array(
-                                            'price'=>'0.00',
-                                            'label'=>'meal',
-                                            'calorie'=>'0000-0000 Cal.',
-                                            'pill'=>false,
-                                       ),
-                                       
-                                   ),
-                                ),
+                                
                                 array(
                                   'title'=>'angus deluxe',
                                   'category'=>'angus',
@@ -1510,15 +1383,15 @@
                                         ),
                                    'pricelabel'=>array(
                                         'sandwich'=>array(
-                                            'price'=>'0.00',
+                                            'price'=>'4.19',
                                             'label'=>'sandwich',
-                                            'calorie'=>'0000-0000 Cal.',
+                                            'calorie'=>'750 Cal.',
                                             'pill'=>false,
                                         ),
                                        'meal'=>array(
-                                            'price'=>'0.00',
+                                            'price'=>'6.09',
                                             'label'=>'meal',
-                                            'calorie'=>'0000-0000 Cal.',
+                                            'calorie'=>'1130-1370 Cal.',
                                             'pill'=>false,
                                        ),
                                        
@@ -1540,15 +1413,15 @@
                                         ),
                                    'pricelabel'=>array(
                                         'sandwich'=>array(
-                                            'price'=>'0.00',
+                                            'price'=>'4.19',
                                             'label'=>'sandwich',
-                                            'calorie'=>'0000-0000 Cal.',
+                                            'calorie'=>'790 Cal.',
                                             'pill'=>false,
                                         ),
                                        'meal'=>array(
-                                            'price'=>'0.00',
+                                            'price'=>'6.09',
                                             'label'=>'meal',
-                                            'calorie'=>'0000-0000 Cal.',
+                                            'calorie'=>'1170-1410 Cal.',
                                             'pill'=>false,
                                        ),
                                        
@@ -1570,15 +1443,15 @@
                                         ),
                                    'pricelabel'=>array(
                                         'sandwich'=>array(
-                                            'price'=>'0.00',
+                                            'price'=>'4.19',
                                             'label'=>'sandwich',
-                                            'calorie'=>'0000-0000 Cal.',
+                                            'calorie'=>'770 Cal.',
                                             'pill'=>false,
                                         ),
                                        'meal'=>array(
-                                            'price'=>'0.00',
+                                            'price'=>'6.09',
                                             'label'=>'meal',
-                                            'calorie'=>'0000-0000 Cal.',
+                                            'calorie'=>'1150-1390 Cal.',
                                             'pill'=>false,
                                        ),
                                        
@@ -1647,7 +1520,7 @@
                                 <div class="evm-description-sandwich<?php echo count($evm['img']['sandwich']) > 1 ? ' evm-item-multiple' : ''; ?>">
                                     <div class="evm-price-label-container">
                                         <div class="evm-price-container">
-                                            <span class="price">1.99</span>
+                                            <span class="price"><?php print $evm['pricelabel']['sandwich']['price']; ?></span>
                                         </div>
 
                                         <div class="evm-label-container">
@@ -1663,7 +1536,21 @@
                                         <?php endif;?>
                                         
                                         <div class="calorie-content-container">
-                                            <span class="calorie">0000-0000 Cal.</span>
+                                            <span class="calorie">
+											
+											<?php
+												if(is_array($evm['pricelabel']['sandwich']['calorie'])){
+													print $evm['pricelabel']['sandwich']['calorie'][1];
+												}
+												else{
+													print $evm['pricelabel']['sandwich']['calorie'];
+												}
+											
+											
+											?>
+									
+											
+											</span>
                                         </div>
                                     </div>
                                     
@@ -1675,7 +1562,21 @@
                                         </div>
                                         
                                         <div class="calorie-content-container">
-                                            <span class="calorie">0000-0000 Cal.</span>
+                                            <span class="calorie">
+											
+											<?php
+												if(is_array($evm['pricelabel']['sandwich']['calorie'])){
+													print $evm['pricelabel']['sandwich']['calorie'][0];
+												}
+												else{
+													print $evm['pricelabel']['sandwich']['calorie'];
+												}
+											
+											
+											?>
+											
+											
+											</span>
                                         </div>
                                     </div>
                                     <?php endif;?>
@@ -1685,7 +1586,7 @@
                                 <div class="evm-description-meal<?php echo count($evm['img']['sandwich']) > 1 ? ' evm-item-multiple' : ''; ?>">
                                     <div class="evm-price-label-container">
                                         <div class="evm-price-container">
-                                            <span class="price">2.99</span>
+                                            <span class="price"><?php print $evm['pricelabel']['meal']['price']; ?></span>
                                         </div>
 
                                         <div class="evm-label-container">
@@ -1701,7 +1602,21 @@
                                         <?php endif;?>
 
                                         <div class="calorie-content-container">
-                                            <span class="calorie">0000-0000 Cal.</span>
+                                            <span class="calorie">
+											
+											<?php
+												if(is_array($evm['pricelabel']['meal']['calorie'])){
+													print $evm['pricelabel']['meal']['calorie'][1];
+												}
+												else{
+													print $evm['pricelabel']['meal']['calorie'];
+												}
+											
+											
+											?>
+											
+											
+											</span>
                                         </div>
                                     </div>
                                     
@@ -1711,7 +1626,19 @@
                                             <span class="pill">crispy</span>
                                         </div>
                                         <div class="calorie-content-container">
-                                            <span class="calorie">0000-0000 Cal.</span>
+                                            <span class="calorie">
+											<?php
+												if(is_array($evm['pricelabel']['meal']['calorie'])){
+													print $evm['pricelabel']['meal']['calorie'][0];
+												}
+												else{
+													print $evm['pricelabel']['meal']['calorie'];
+												}
+											
+											
+											?>
+											
+											</span>
                                         </div>
                                     </div>
                                     <?php endif;?>
@@ -1739,12 +1666,14 @@
                 <div id="zone6" class="zone half-wide">
                     <div class="promo-container" data-carousel-animator='<?php echo $promo_vars; ?>'>
                         <ul>
-                            <li><img src="./media/promo3.jpg"/></li>
-                            <li><img src="./media/promo4.jpg"/></li>
+                            <li><img src="./media/lunch-local-zone6-1.jpg"/></li>
+                            <li><img src="./media/lunch-local-zone6-2.jpg"/></li>
+							<li><img src="./media/lunch-local-zone6-3.jpg"/></li>
 
                             <div class="clear"></div>
                         </ul>
                     </div>
+                    <div class="zone-inset-shadow-l"></div>
                 </div>
 
                 <div class="clear"></div>

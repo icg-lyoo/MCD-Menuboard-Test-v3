@@ -21,7 +21,16 @@
     font-family: 'DINOTCB';
     src: url('../font/DINOT-CondBold.eot');
     src: url('../font/DINOT-CondBold.eot?#iefix') format('embedded-opentype'),
-        url('../font/DINOT-CondBold2.otf') format('opentype');
+         url('../font/DINOT-CondBold2.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DINProB';
+    src: url('../font/DINPro-Bold.eot');
+    src: url('../font/DINPro-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../font/DINPro-Bold.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -75,6 +84,22 @@ li {
     width: 2880px;
 }
 
+.zone-inset-shadow-l,
+.zone-inset-shadow-r {
+    height: 1080px;
+    position: absolute;
+    width: 960px;
+    z-index: 1000;
+}
+
+.zone-inset-shadow-l {
+    background: url(../assets/bg_shadow_left.png) no-repeat;
+}
+
+.zone-inset-shadow-r {
+    background: url(../assets/bg_shadow_right.png) no-repeat;
+}
+
 .promo-container ul {
     width: 200%;
 }
@@ -100,12 +125,8 @@ li {
 }
 
 /*EVM Zone Styles*/
-.evm-container,
-#zone6 {
-    background: #ffffff url("../assets/evm_row_bg.jpg") repeat-y;
-}
-
 .evm-container {
+    background: #ffffff url("../assets/evm_row_bg_xy.jpg") repeat;
     float:left;
 }
 
@@ -146,9 +167,10 @@ li {
 .evm-number {
     background: url("../assets/evm_number_red.png") no-repeat center center scroll;
     color: #ffffff;
+    font-family: "DINProB";
     height: 92px;
     width: 92px;
-    font-size: 38px;
+    font-size: 40px;
     text-align: center;
     line-height: 85px;
     margin: 20px;
@@ -168,13 +190,13 @@ li {
 }
 
 .evm-heading {
-    z-index:10;
-    position:relative;
-    font-size:32px;
-    top:85px;
-    padding:0 0 0 30px;
+    z-index: 10;
+    position: relative;
+    font-size: 32px;
+    top: 85px;
+    padding: 0 0 0 30px;
     font-family: "DINOTCB";
-    line-height:100%;
+    line-height: 100%;
 }
 
 .evm-heading-span {

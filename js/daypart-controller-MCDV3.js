@@ -59,7 +59,7 @@ var daypartController = {
     },
     // switch daypart
     switchDaypart: function() {
-        var _settings = { url: "?daypart=" + this.currentDaypart },
+        var _settings = { url: "?daypart=" + this.currentDaypart},
             _callbacks = {
                 success: daypartController.ajaxSuccess,
                 error: daypartController.ajaxFail,

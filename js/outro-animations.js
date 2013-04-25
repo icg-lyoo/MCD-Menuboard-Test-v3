@@ -11,7 +11,7 @@ var outroAnimations = {
         var _menuContentAnimations = [{
                 operation: "fadeOut",
                 elementSelector: "#menu-content",
-                duration: 2,
+                duration: 0.5,
                 timelineVars: {
                     eventCallback: {
                         typeOf: "onComplete",

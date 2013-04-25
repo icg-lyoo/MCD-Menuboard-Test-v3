@@ -41,7 +41,9 @@ var mcdController = {
         if (swfobject.hasFlashPlayerVersion("9.0.0")) {
             var fn = function() {
 
-               swfobject.removeSWF("pe-container");
+                var daypartNow = daypartController.currentDaypart;
+
+               swfobject.removeSWF("pe-container-" + daypartNow);
 
                 var attributes = { data: "promo.swf"};
 
@@ -64,10 +66,10 @@ var mcdController = {
                     debug: "1",
                     preview: "0",
                     bgImg: null,
-                    dataUrl: "promodata.txt"
+                    dataUrl: "promodata-" + daypartNow + ".txt"
                 };
 
-                swfobject.embedSWF("promo.swf", "pe-container", "1920", "1080", "9.0.0","expressInstall.swf", flashvars, params, attributes);
+                swfobject.embedSWF("promo.swf", "pe-container-" + daypartNow, "1920", "1080", "9.0.0","expressInstall.swf", flashvars, params, attributes);
             };
 
             swfobject.addDomLoadEvent(fn);

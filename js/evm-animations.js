@@ -16,6 +16,7 @@ var evmAnimations = {
                 operation: "set",
                 elementSelector: ".evm-number, .evm-heading, .evm-description, .evm-footnote, .evm-spacer",
                 timelineVars: {
+                    delay: 3,
                     eventCallback: {
                         typeOf: "onComplete",
                         callback: evmAnimations.evmIntroOnComplete
@@ -34,7 +35,7 @@ var evmAnimations = {
             }, {
                 operation: "fadeIn",
                 elementSelector: ".evm-number, .evm-heading, .evm-description, .evm-footnote, .evm-spacer",
-                duration: 2
+                duration: 0.5
             }];
 
         var $evmContainer = $(evmAnimations.timelineTargetElements.intro);
