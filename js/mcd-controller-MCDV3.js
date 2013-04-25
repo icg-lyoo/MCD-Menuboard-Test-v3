@@ -45,7 +45,7 @@ var mcdController = {
 
                swfobject.removeSWF("pe-container-" + daypartNow);
 
-                var attributes = { data: "promo.swf"};
+                var attributes = { data: "promo.swf" };
 
                 var params = {
                     quality: "high",

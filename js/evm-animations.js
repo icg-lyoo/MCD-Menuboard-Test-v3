@@ -5,9 +5,9 @@ var evmAnimations = {
         sandwichOptions: ".sandwich-item-image, .evm-description"
     },
     run: function() {
-        this.evmSandwichOptions(); // initialize the sandwich options timeline first (i.e. grilled/crispy)
-        this.evmSandwichToMeal(); // initialize the sandwich to meal timeline
-        this.evmIntro(); // initialize the the intro animations timeline
+        evmAnimations.evmSandwichOptions(); // initialize the sandwich options timeline first (i.e. grilled/crispy)
+        evmAnimations.evmSandwichToMeal(); // initialize the sandwich to meal timeline
+        evmAnimations.evmIntro(); // initialize the the intro animations timeline
     },
     evmIntro: function() {
 
@@ -16,7 +16,7 @@ var evmAnimations = {
                 operation: "set",
                 elementSelector: ".evm-number, .evm-heading, .evm-description, .evm-footnote, .evm-spacer",
                 timelineVars: {
-                    delay: 3,
+                    pause: true,
                     eventCallback: {
                         typeOf: "onComplete",
                         callback: evmAnimations.evmIntroOnComplete
@@ -71,16 +71,12 @@ var evmAnimations = {
                 operation: "fadeIn",
                 elementSelector: ".meal-items-image img, .evm-description-meal",
                 duration: 0.7,
-                position: 0,
-                fadeInVars: {
-                }
+                position: 0
             }, {
                 operation: "fadeOut",
                 elementSelector: ".evm-description-sandwich",
                 duration: 0.7,
-                position: 0,
-                fadeOutVars: {
-                }
+                position: 0
             }, {
                 operation: "scale",
                 elementSelector: ".sandwich-item-image img",
@@ -134,16 +130,12 @@ var evmAnimations = {
                 operation: "fadeOut",
                 elementSelector: ".evm-item-multiple > .evm-calorie-container, .evm-item-multiple > img",
                 duration: 1,
-                position: 0,
-                fadeOutVars: {
-                }
+                position: 0
             }, {
                 operation: "fadeIn",
                 elementSelector: ".evm-item-multiple > .evm-calorie-container + .evm-calorie-container, .evm-item-multiple > img + img",
                 duration: 1,
-                position: 0,
-                fadeInVars: {
-                }
+                position: 0
             }];
 
         var $evmAlternates = $(evmAnimations.timelineTargetElements.sandwichOptions);

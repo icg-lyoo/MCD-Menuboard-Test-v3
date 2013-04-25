@@ -100,6 +100,11 @@ li {
     background: url(../assets/bg_shadow_right.png) no-repeat;
 }
 
+/*#zone1,
+#zone6 {
+    background-color: #fff;
+}*/
+
 .promo-container ul {
     width: 200%;
 }
