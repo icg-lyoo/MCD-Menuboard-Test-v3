@@ -1,6 +1,6 @@
 var mcdController = {
     console: {
-        on: true,
+        on: false,
         log: function(msg) {
             if(!mcdController.console.on) {
                 return;
@@ -117,7 +117,7 @@ var mcdController = {
         return this;
     },
     buildTimeline: function($container, animations) {
-        $.each(animations, function() {
+        $.each(animations, function(i) {
             $container.timelineBuilder(this.operation, this);
         });
     },

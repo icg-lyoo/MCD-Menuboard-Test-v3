@@ -1,6 +1,9 @@
 var introAnimations = {
-    timelineTargetElements: {
-        main: "body"
+    timelineTargets: {
+        main: {
+            namespace: "introMain",
+            containerSelector: "body"
+        }
     },
     run: function() {
         this.introMain();
@@ -8,10 +11,12 @@ var introAnimations = {
     introMain: function() {
 
         // menu content animations sequencing object
-        var _menuContentAnimations = [{
+        var _timelineNamespace = introAnimations.timelineTargets.main.namespace,
+            _animations = [{
                 operation: "set",
-                elementSelector: mcdController.selectors.promoContainer + ", " + mcdController.selectors.menuContainer + ", " + evmAnimations.timelineTargetElements.intro + ", .zone-inset-shadow-l, .zone-inset-shadow-r",
+                elementSelector: mcdController.selectors.promoContainer + ", " + mcdController.selectors.menuContainer + ", " + evmAnimations.timelineTargets.intro.containerSelector + ", .zone-inset-shadow-l, .zone-inset-shadow-r",
                 timelineVars: {
+                    namespace: _timelineNamespace,
                     delay: 2.5,
                     eventCallback: {
                         typeOf: "onComplete",
@@ -24,37 +29,52 @@ var introAnimations = {
             }, {
                 operation: "set",
                 elementSelector: "#menu-content",
+                timelineVars: {
+                    namespace: _timelineNamespace
+                },
                 setVars: {
                     css: { alpha: 1 }
                 }
             }, {
                 operation: "fadeIn",
                 elementSelector: mcdController.selectors.promoContainer,
-                duration: 0.5
+                duration: 0.5,
+                timelineVars: {
+                    namespace: _timelineNamespace
+                }
             }, {
                 operation: "fadeIn",
                 elementSelector: mcdController.selectors.menuContainer + ", .zone-inset-shadow-r",
                 duration: 0.5,
-                position: "-=0.25"
+                position: "-=0.25",
+                timelineVars: {
+                    namespace: _timelineNamespace
+                }
             }, {
                 operation: "fadeIn",
-                elementSelector: evmAnimations.timelineTargetElements.intro + ", .zone-inset-shadow-l",
+                elementSelector: evmAnimations.timelineTargets.intro.containerSelector + ", .zone-inset-shadow-l",
                 duration: 0.5,
-                position: "-=0.25"
+                position: "-=0.25",
+                timelineVars: {
+                    namespace: _timelineNamespace
+                }
             }];
 
-        var $menuContent = $(this.timelineTargetElements.main);
-        mcdController.buildTimeline($menuContent, _menuContentAnimations);
+        var $container = $(introAnimations.timelineTargets.main.containerSelector);
+        mcdController.buildTimeline($container, _animations);
     },
     introOnComplete: function() {
 
         // play evmIntro timeline
-        var $evmIntro = $(evmAnimations.timelineTargetElements.intro);
-        mcdController.controlTimeline($evmIntro, "restart", true);
+        var $evmIntro = $(evmAnimations.timelineTargets.intro.containerSelector),
+            _namespace = evmAnimations.timelineTargets.intro.namespace,
+            _params = { includeDelay: true, namespace: _namespace };
+
+        mcdController.controlTimeline($evmIntro, "restart", _params);
     },
     killAnimations: function() {
 
-        $.each(this.timelineTargetElements, function(key, targetElementSelector) {
+        $.each(this.timelineTargets, function(key, targetElementSelector) {
             var $container = $(targetElementSelector);
             mcdController.killTimeline($container);
         });

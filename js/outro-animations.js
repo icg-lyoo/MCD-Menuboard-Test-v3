@@ -1,6 +1,9 @@
 var outroAnimations = {
-    timelineTargetElements: {
-        main: "body"
+    timelineTargets: {
+        main: {
+            namespace: "outroMain",
+            containerSelector: "body"
+        }
     },
     run: function() {
         this.outroMain();
@@ -8,11 +11,13 @@ var outroAnimations = {
     outroMain: function() {
 
         // menu content animations sequencing object
-        var _menuContentAnimations = [{
+        var _timelineNamespace = outroAnimations.timelineTargets.main.namespace,
+            _animations = [{
                 operation: "fadeOut",
                 elementSelector: "#menu-content",
                 duration: 0.5,
                 timelineVars: {
+                    namespace: _timelineNamespace,
                     eventCallback: {
                         typeOf: "onComplete",
                         callback: outroAnimations.outroMainOnComplete
@@ -20,8 +25,8 @@ var outroAnimations = {
                 }
             }];
 
-        var $menuContent = $(this.timelineTargetElements.main);
-        mcdController.buildTimeline($menuContent, _menuContentAnimations);
+        var $container = $(this.timelineTargets.main.containerSelector);
+        mcdController.buildTimeline($container, _animations);
     },
     outroMainOnComplete: function() {
         outroAnimations.killAnimations();
@@ -29,7 +34,7 @@ var outroAnimations = {
     },
     killAnimations: function() {
 
-        $.each(this.timelineTargetElements, function(key, targetElementSelector) {
+        $.each(this.timelineTargets, function(key, targetElementSelector) {
             var $container = $(targetElementSelector);
             mcdController.killTimeline($container);
         });

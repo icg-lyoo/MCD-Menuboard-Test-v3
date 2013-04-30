@@ -1501,8 +1501,8 @@
                             <div class="evm-number <?php print $evm['category'] ?>"><?php print $key+1 ?></div>
                             <div class="evm-image">
                                 <div class="meal-items-image">
-                                    <img style="left: 280px; top: 10px" src="./media/coke.png"/>
-                                    <img style="left: 350px; top: 42px;" src="./media/fries.png"/>
+                                    <img style="left: 290px; top: 5px" src="./media/coke.png"/>
+                                    <img style="left: 360px; top: 37px;" src="./media/fries.png"/>
                                 </div>
                                 
                                 <div class="sandwich-item-image<?php echo count($evm['img']['sandwich']) > 1 ? ' evm-item-multiple' : ''; ?>">

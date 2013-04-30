@@ -12,7 +12,7 @@
                 duration: 0.5,
                 delay: 0,
                 offset: 0,
-                interval: 2000,
+                interval: 2,
                 // flip property
                 flipDepth: -500,
                 // not to be defined outside of plugin
@@ -77,7 +77,7 @@
             slideGetTimelineObj: function() {
 
                 var _vars = {
-                        delay: settings.interval,
+                        delay: settings.delay,
                         repeat: -1,
                         repeatDelay: settings.interval
                     };
@@ -92,7 +92,7 @@
                         onComplete: methods.slideOnCompleteHandler
                     };
 
-                return methods.getTweenObj(_vars);
+                return methods.getTweenObj(_vars, "to");
             },
             slideOnCompleteHandler: function() {
 
@@ -119,36 +119,58 @@
 
             fadeInOut: function() {
 
-                var _timelineObj = methods.fadeInOutGetTimelineObjMaster();
+                var _timelineObj = methods.fadeInOutGetTimelineObj();
 
-                _timelineObj.set(settings.$elements, {css: {position: "absolute"}});
+                settings.$elements.each(function(i) {
 
-                settings.$elements.each(function(i, element) {
-
-                    var position = i === 0 ? 0 : "-=" + settings.offset;
-                    _timelineObj.add(TweenMax.fromTo(element, settings.duration, {css: {alpha: 0}}, {css: {display: "block", alpha: 1}, repeat: 1, repeatDelay: settings.interval, yoyo: true, ease: Linear.easeNone}), position);
+                    var position = i === 0 ? 0 : "+=" + settings.offset;
+                    _timelineObj.add(methods.fadeInOutGetTweenObj(this), position);
                 });
+
+                _timelineObj.fromTo(settings.$elements.eq(0), settings.duration, {opacity: 0}, {opacity: 1}, "+=" + settings.offset)
+                            .call(_timelineObj.seek, [settings.duration], _timelineObj);
 
                 methods.addTimelineToContainer(_timelineObj);
             },
-            fadeInOutGetTimelineObjMaster: function() {
+            fadeInOutGetTimelineObj: function() {
 
                 var _vars = {
                         delay: settings.delay,
-                        repeat: -1
+                        repeat: 0,
+                        repeatDelay: settings.repeatDelay
                     };
 
-                return methods.getTimelineObj(_vars);
+                return methods.getTimelineObj(_vars)
+                              .set(settings.$elements, {css: {position: "absolute"}});
+            },
+            fadeInOutGetTweenObj: function($element) {
+
+                var _vars = [{
+                        css: { alpha: 0 }
+                    }, {
+                        css: { display: "block", alpha: 1 },
+                        repeat: 1,
+                        repeatDelay: settings.interval,
+                        yoyo: true,
+                        ease: Linear.easeNone
+                    }];
+
+                return methods.getTweenObj(_vars, "fromTo", $element);
             },
 
             getTimelineObj: function(vars) {
 
                 return new TimelineMax(vars);
             },
-            getTweenObj: function(vars, $target) {
+            getTweenObj: function(vars, method, $target) {
 
                 $target = $target == undefined ? settings.$elements : $target;
-                return new TweenMax($target, settings.duration, vars);
+
+                if (Array.isArray(vars)) {
+                    return TweenMax[method]($target, settings.duration, vars[0], vars[1]);
+                } else {
+                    return TweenMax[method]($target, settings.duration, vars);
+                }
             },
             incrementElementIndex: function() {
 
@@ -197,14 +219,5 @@
         }
 
         return {};
-
-
-        // Animate first image in
-        /*TweenMax.fromTo($currentImage, 1.8,
-            {css: {rotationY: -110, rotationX: Math.random() * 35, z: -1000, alpha: 0}},
-            {css: {rotationY: 0, rotationX: 0, z: 0, alpha: 1}, ease: Power3.easeInOut, onComplete: function() {
-                //$imgWrap.on('click', flip);
-            setInterval(fadeInOut, 5000);
-        }});*/
     };
 })(jQuery);

@@ -14,7 +14,7 @@ var daypartController = {
             daypartController.initialized = true;
 
             daypartController.switchDaypartOnKeyPress();
-            // daypartController.switchDaypartAuto();
+            daypartController.switchDaypartAuto();
         }
     },
     // switch daypart on the fly (on keypress), if the current board is not showing the daypart pressed
