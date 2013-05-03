@@ -498,9 +498,9 @@ var evmAnimations = {
     },
     killAnimations: function() {
 
-        $.each(evmAnimations.timelineTargets, function(key, targetElementSelector) {
-            var $container = $(targetElementSelector);
-            mcdController.killTimeline($container);
+        $.each(evmAnimations.timelineTargets, function(key, target) {
+            var $container = $(target.containerSelector);
+            mcdController.killTimeline($container, target.namespace);
         });
     }
 }

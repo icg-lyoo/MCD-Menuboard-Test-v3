@@ -35,7 +35,6 @@
     font-style: normal;
 }
 
-
 root {
 /*    display: block;*/
 }
@@ -306,22 +305,23 @@ li {
 }
 
 .menu-content-list{
-    width:400px;
-    max-height:1000px;
-    overflow:hidden;
-    margin:24px 44px 25px 0;
+    width: 400px;
+    max-height: 1000px;
+    overflow: hidden;
+    margin: 24px 44px 25px 0;
     border: 1px none;
     padding:18px;
     border-radius:30px;
-    background:rgb(255,255,255);
+    background: rgb(255,255,255);
 	background: transparent\9;
-	background:rgba(255,255,255,0.4);
+	background: rgba(255,255,255,0.4);
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66ffffff,endColorstr=#66ffffff);
 	zoom: 1;
 }
 
 .menu-heading {
     font-size: 48px;
+    height: 124px;
 }
 
 .menu-heading-category {

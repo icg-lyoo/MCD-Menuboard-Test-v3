@@ -3,8 +3,7 @@ var daypartController = {
     currentDaypart: "lunch",
     vars: {
         locationQueryStr: location.search,
-        locationURL: location.hostname + location.pathname,
-        daypartNames: ["breakfast", "lunch"],
+        daypartNames: ["breakfast", "lunch", "late-night"],
         daypartContainerSelector: "#menu-content",
         switchAutoIntervalID: null,
         switchAutoIntervalFrequency: 80000
@@ -14,8 +13,9 @@ var daypartController = {
             daypartController.initialized = true;
 
             daypartController.switchDaypartOnKeyPress();
-            daypartController.switchDaypartAuto();
         }
+
+        daypartController.switchDaypartAuto();
     },
     // switch daypart on the fly (on keypress), if the current board is not showing the daypart pressed
     switchDaypartOnKeyPress: function() {
@@ -31,6 +31,10 @@ var daypartController = {
             // lunch/dinner refresh pressed (l)
             else if (_keyPressed === 108) {
                 daypartController.currentDaypart = _daypartNames[1]; // =lunch/dinner
+            }
+            // late-night refresh pressed (n)
+            else if (_keyPressed === 110) {
+                daypartController.currentDaypart = _daypartNames[2]; // =late-night
             } else {
                 // misc key pressed
                 return false;
@@ -44,16 +48,17 @@ var daypartController = {
     switchDaypartAuto: function() {
         var _controllerVars = daypartController.vars,
             _daypartNames = _controllerVars.daypartNames,
-            _i = 0;
+            _i = _daypartNames.indexOf(daypartController.currentDaypart);
 
-        clearInterval(_controllerVars.switchAutoIntervalID);
+        if (_controllerVars.switchAutoIntervalID) {
+            clearInterval(_controllerVars.switchAutoIntervalID);
+        }
 
         _controllerVars.switchAutoIntervalID = setInterval(function() {
-
+            _i = ++_i >= _daypartNames.length ? 0 : _i;
             daypartController.currentDaypart = _daypartNames[_i];
             mcdController.killAnimations();
             mcdController.animateOutro();
-            _i = ++_i >= _daypartNames.length ? 0 : _i;
 
         }, _controllerVars.switchAutoIntervalFrequency);
     },

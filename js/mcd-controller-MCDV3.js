@@ -26,7 +26,6 @@ var mcdController = {
         } else {
             $(window).load(mcdController.windowLoadedHandler);
         }
-
         daypartController.run();
         mcdController.setupFlashVideo();
 
@@ -124,8 +123,8 @@ var mcdController = {
     controlTimeline: function($container, action, params) {
         $container.timelineBuilder(action, params);
     },
-    killTimeline: function($container) {
-        $container.timelineBuilder("kill");
+    killTimeline: function($container, namespace) {
+        $container.timelineBuilder("kill", namespace);
     }
 };
 

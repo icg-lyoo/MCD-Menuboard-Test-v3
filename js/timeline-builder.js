@@ -238,14 +238,18 @@
                     });
                 },
                 // kills/stops timeline animations immediately, and releases it for garbage collection
-                kill: function() {
+                kill: function(timelineNamespace) {
+
+                    var _namespace = settings.timelineVars.namespace;
+
+                    if (timelineNamespace != undefined) { _namespace = timelineNamespace; }
 
                     return $context.each(function() {
 
-                        var _data = methods.getData($(this));
+                        methods.setPluginVars($(this));
 
-                        _data.settings.timelineMaster.kill();
-                        $(this).removeData(namespace); // remove data namespace from DOM element
+                        settings.timelineMaster.kill();
+                        $(this).removeData(_namespace); // remove data namespace from DOM element
                     });
                 },
                 setPluginVars: function($container, options) {

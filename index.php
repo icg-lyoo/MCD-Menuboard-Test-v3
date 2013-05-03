@@ -1,7 +1,7 @@
 <?php
     $promo_vars = '{"elementSelector": "img", "animation": "slide", "duration": 0.5, "offset": -0.5, "overlap": 1, "delay": 8, "interval": 5}';
-    $menu1_vars = '{"elementSelector": ".menu-content-container", "animation": "fadeInOut", "duration": 0.5, "interval": 20}';
-    $menu2_vars = '{"elementSelector": ".menu-content-container", "animation": "fadeInOut", "duration": 0.5, "delay": 0, "interval": 20}';
+    $menu1_vars = '{"elementSelector": ".menu-content-container", "animation": "fadeInOut", "duration": 0.5, "interval": 7}';
+    $menu2_vars = '{"elementSelector": ".menu-content-container", "animation": "fadeInOut", "duration": 0.5, "delay": 0, "interval": 9}';
 
     $defaultDayart = 'lunch';
 
